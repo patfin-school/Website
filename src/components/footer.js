@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Div = styled.div`
     width : 100%
-    height : 10vh
+    height : 20vh
     background-color: #141E64
     color : white
     text-align: center;
@@ -18,8 +18,9 @@ const Copyright = styled.div`
 `
 
 const Text = styled.div`
-  font-size: 1em;
+  font-size: 1.1em;
 `
+
 export default function footer() {
   return (
     <Div>

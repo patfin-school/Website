@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 const ScreenSizes = {
 	DESKTOP: 2200 ,
-	TABLET: 1200,
+	TABLET: 1000,
 	PHONE: 650 ,
 };
 

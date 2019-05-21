@@ -5,12 +5,11 @@ import styled from "styled-components"
 import { withStyles  } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
 import Link from "gatsby"
-import withRoot from './func/withRoot'
 
 import Image from "../image"
 
 import { media } from '../../media_style';
-
+import withRoot from './withRoot'
 //css file
 import headerStyle from "./headerStyle"
 
@@ -179,4 +178,4 @@ Header.propTypes = {
   }),
 }
 
-export default  withStyles(headerStyle)(Header) 
+export default  withRoot(withStyles(headerStyle)(Header)) 

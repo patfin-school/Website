@@ -14,17 +14,25 @@ const Header = styled.h3`
 const Div = styled.div`
   background-color: #2c3e50;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
+  ${media.tablet`
+    height : 115vh
+  `}
+  ${media.phone`
+    height : 90vh
+  `}
 `
 
-const Text = styled.h5`
-  text-align: center;
+const Text = styled.p`
+  ${media.tablet`
+font-size : 1.3em
+`}
+  ${media.phone`
+font-size : 1.1em
+`}
+font-size : 1.5em
+text-align: center;
   color: white;
-`
-
-const Intro = styled.p`
-padding-left : 20px 
-color: white;
 `
 
 const Title = styled.h5`
@@ -33,6 +41,16 @@ const Title = styled.h5`
 `
 
 const Github = styled.button`
+${media.tablet`
+border-radius: 3px;
+  font-size : 1.1em
+  height : 55px
+`}
+  ${media.phone`
+  border-radius: 3px;
+  font-size : 0.9em
+  height : 65px
+`}
   background: transparent;
   border-radius: 3px;
   border: 1.5px solid palevioletred;
@@ -43,8 +61,7 @@ const Github = styled.button`
   width : 75%
   height : 70px
   margin-left : 10%
-  margin-top : 2%
-  font-weight : bold
+  margin-top : 12%
 `
 
 const Project = styled.button`
@@ -55,37 +72,85 @@ const Project = styled.button`
   margin: 0 1em;
   padding: 0.25em 1em;
   font-size : 0.9em
-  width : 50% 
+  width : 60% 
   height : 60px
-  margin-left : 23%
-  font-weight : bold
+  margin-left : 20%
+  margin-top : 5%
+  ${media.tablet`
+    border-radius: 3px;
+    font-size : 1.1em
+    height : 55px
+  `}
+    ${media.phone`
+    border-radius: 3px;
+    font-size : 0.9em
+    height : 65px
+  `}
 `
 
 const Contain = styled.div`
   width: 50%;
-  padding-top: 30%;
-  margin-left: 3%;
-  margin-right: 3%;
+  padding-top: 25%;
+  margin-left: 2%;
+  margin-right: 2%;
+  ${media.tablet`
+  padding-top: 25%;
+`}
+  ${media.phone`
+padding-top: 30%;
+`}
 `
 
 const Description = styled.p`
-  font-size : 0.85em
-  text-align: center;
+  font-size : 1.1em
   color: #212529;
+  ${media.tablet`
+  font-size : 1em
+`}
+  ${media.phone`
+  font-size : 0.9em
+`}
 `
 
 const Slider = styled.div`
 width : 100%
 height : 350px
-padding-left : 10px
-padding-top : 5%
-padding-right : 10px
+padding-left : 5px
+padding-top : 1%
+padding-right : 30px 
+${media.tablet`
+padding-top : 3%
+padding-right : 20px 
+`}
+${media.phone`
+padding-top : 2%
+padding-right : 10px 
+`}
 `
 
 const Note = styled.p`
   color : white
   padding-left : 30px
   font-size : 0.8em
+`
+
+const StyledCard = styled(Card)`
+  width:  100%  
+  height: 100vh  
+  background-color:  white;
+  border-radius:  20px;
+  ${media.tablet`
+  width:  100%  
+  height: 90vh  
+  background-color:  white;
+  border-radius:  20px;
+`}
+  ${media.phone`
+  width:  100%  
+  height: 70vh  
+  background-color:  white;
+  border-radius:  20px;
+`}
 `
 
 export default class projects extends Component {
@@ -112,25 +177,51 @@ export default class projects extends Component {
     return (
       <div>
         <Div>
-          <Header> RECENT STORIES </Header> <hr />  
-          <Note>
-        </Note>
+          <Header> RECENT STORIES </Header> <hr />
+          <Note />
           <Flex>
             <Contain>
-              <Text> All school events and activities pened down for your viewing. </Text>
+              <Text>
+                {" "}
+                All school events and activities pened down for your viewing.{" "}
+              </Text>
               <Github> VIEW BLOG</Github>
             </Contain>
             <Slider>
               <Carousel>
                 <Carousel.Item>
-                  <Card style={{ width: "100%",  minWidth: ' 70% ',    height: "75vh" }}>
+                  <StyledCard>
                     <Card.Img
                       variant="top"
                       src={
                         "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
                       }
                     />
-                    <Title> Our Trip to AIT  </Title>
+                    <Title> Our Trip to AIT </Title>
+                    <Card.Body>
+                      <Description>
+                        Mobile Restaurant App for Students to search and rate
+                        meals within restaurants and also for restaurants owners
+                        to create searchable digital Restaurants
+                      </Description>
+                      <Description  >
+                        <b> Date: </b> 01/01/01
+                      </Description>
+                      <Project> Read More </Project>
+                    </Card.Body>
+                  </StyledCard>
+                  ;
+                </Carousel.Item>
+
+                <Carousel.Item>
+                  <StyledCard>
+                    <Card.Img
+                      variant="top"
+                      src={
+                        "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+                      }
+                    />
+                    <Title> Our Trip to AIT </Title>
                     <Card.Body>
                       <Description>
                         Mobile Restaurant App for Students to search and rate
@@ -140,85 +231,60 @@ export default class projects extends Component {
                       <Description>
                         <b> Date: </b> 01/01/01
                       </Description>
-                      <Project> VIEW STORY </Project>
+                      <Project> Read More </Project>
                     </Card.Body>
-                  </Card>
-                  ;
+                  </StyledCard>
                 </Carousel.Item>
 
                 <Carousel.Item>
-                <Card style={{ width: " 100%", height: "75vh" }}>
-                <Card.Img
-                  variant="top"
-                  src={
-                    "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                  }
-                />
-                <Title> Our Trip to AIT  </Title>
-                <Card.Body>
-                  <Description>
-                    Mobile Restaurant App for Students to search and rate
-                    meals within restaurants and also for restaurants owners
-                    to create searchable digital Restaurants
-                  </Description>
-                  <Description>
-                    <b> Date: </b> 01/01/01
-                  </Description>
-                  <Project> VIEW STORY </Project>
-                </Card.Body>
-              </Card>
+                  <StyledCard>
+                    <Card.Img
+                      variant="top"
+                      src={
+                        "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+                      }
+                    />
+                    <Title> Our Trip to AIT </Title>
+                    <Card.Body>
+                      <Description>
+                        Mobile Restaurant App for Students to search and rate
+                        meals within restaurants and also for restaurants owners
+                        to create searchable digital Restaurants
+                      </Description>
+                      <Description>
+                        <b> Date: </b> 01/01/01
+                      </Description>
+                      <Project> Read More </Project>
+                    </Card.Body>
+                  </StyledCard>
                 </Carousel.Item>
 
                 <Carousel.Item>
-                <Card style={{ width: " 100%", height: "75vh" }}>
-                <Card.Img
-                  variant="top"
-                  src={
-                    "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                  }
-                />
-                <Title> Our Trip to AIT  </Title>
-                <Card.Body>
-                  <Description>
-                    Mobile Restaurant App for Students to search and rate
-                    meals within restaurants and also for restaurants owners
-                    to create searchable digital Restaurants
-                  </Description>
-                  <Description>
-                    <b> Date: </b> 01/01/01
-                  </Description>
-                  <Project> VIEW STORY </Project>
-                </Card.Body>
-              </Card>
-                </Carousel.Item>
-
-                <Carousel.Item>
-                <Card style={{ width: " 100%", height: "75vh" }}>
-                <Card.Img
-                  variant="top"
-                  src={
-                    "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                  }
-                />
-                <Title> Our Trip to AIT  </Title>
-                <Card.Body>
-                  <Description>
-                    Mobile Restaurant App for Students to search and rate
-                    meals within restaurants and also for restaurants owners
-                    to create searchable digital Restaurants
-                  </Description>
-                  <Description>
-                    <b> Date: </b> 01/01/01
-                  </Description>
-                  <Project> VIEW STORY </Project>
-                </Card.Body>
-              </Card>
+                  <StyledCard>
+                    <Card.Img
+                      variant="top"
+                      src={
+                        "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+                      }
+                    />
+                    <Title> Our Trip to AIT </Title>
+                    <Card.Body>
+                      <Description>
+                        Mobile Restaurant App for Students to search and rate
+                        meals within restaurants and also for restaurants owners
+                        to create searchable digital Restaurants
+                      </Description>
+                      <Description>
+                        <b> Date: </b> 01/01/01
+                      </Description>
+                      <Project> Read More </Project>
+                    </Card.Body>
+                  </StyledCard>
                 </Carousel.Item>
               </Carousel>
             </Slider>
           </Flex>
         </Div>
-     
       </div>
     )
   }

@@ -24,7 +24,7 @@ const Div = styled.div`
 height: 140vh;
 `}
   ${media.phone`
-height: 155vh;
+height: 117vh;
 `} 
   background-color: #f8f8f9;
   color: black;
@@ -33,12 +33,12 @@ height: 155vh;
 
 const Title = styled.p`
   ${media.tablet`
-font-size : 1.1em
+font-size : 1.2em
 `}
   ${media.phone`
-font-size : 1em
+font-size : 1.1em
 `} 
-font-size : 1.2em
+font-size : 1.4em
 text-align: center;
   margin-top: 10px;
 `
@@ -58,7 +58,8 @@ const Text = styled.p`
 font-size : 0.9em
 `}
   ${media.phone`
-font-size : 0.8em
+font-size : 0.73em
+margin-top : 5px
 `}
   margin-top : 10px
   font-size : 1em
@@ -76,7 +77,6 @@ const Github = styled.button`
   height : 60px
   margin-left : 10%
   margin-top : 2%
-  font-weight : bold 
   ${media.tablet`
   border-radius: 3px;
   font-size : 1.1em
@@ -85,7 +85,8 @@ const Github = styled.button`
     ${media.phone`
   border-radius: 3px;
   font-size : 1em
-  height : 55px
+  height : 47px
+  margin-top : 15px
   `}
 `
 
@@ -104,11 +105,14 @@ const Donate = styled.button`
   border-radius: 5px;
   font-size : 1.1em
   height : 45px
+  margin-top : 5px
   `}
     ${media.phone`
-  border-radius: 5px;
-  font-size : 1em
-  height : 35px
+  border: 1.1px solid palevioletred;
+  border-radius: 3px;
+  font-size : 0.8em
+  height : 30px
+  margin-top : 3px
   `}
 `
 
@@ -136,14 +140,22 @@ const Image = styled.img`
  border-radius : 3px
  `}
    ${media.phone`
-   width : 37%
-   height : 22vh
+   width : 38%
+   height : 18vh
    border-radius : 3px
  `} 
 `
 
 const Details = styled.div`
   margin-left: 7%;
+  margin-top: 5%;
+  ${media.tablet`
+    margin-left: 5%;
+  `}
+  ${media.phone`
+  margin-top: 2%;
+    margin-left: 3%;
+  `}
 `
 
 export default function update() {
@@ -231,7 +243,7 @@ export default function update() {
           </Container>
         </Card>
       </Contain>
-      <br />
+      
       <Button>
         <Github> See More </Github>{" "}
       </Button>

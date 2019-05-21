@@ -12,8 +12,10 @@ import About from "../components/about"
 
 import All from "../components/banner/all"
 
+
 const IndexPage = () => (
   <div>
+    <All />
     <Profile />
     <Layout>
       <SEO title="Home" />
