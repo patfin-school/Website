@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { media } from "../../media_style"
 import Flex, { FlexItem } from "styled-flex-component"
 import { Card } from "react-bootstrap"
+import Countdown from "./countdown"
 
 const Header = styled.p`
   ${media.tablet`
@@ -21,10 +22,10 @@ const Header = styled.p`
 
 const Div = styled.div`
   ${media.tablet`
-height: 140vh;
+height: 125vh;
 `}
   ${media.phone`
-height: 117vh;
+height: 120vh;
 `} 
   background-color: #f8f8f9;
   color: black;
@@ -43,23 +44,12 @@ text-align: center;
   margin-top: 10px;
 `
 
-const Date = styled.p`
-  ${media.tablet`
-font-size : 1em
-`}
-  ${media.phone`
-font-size : 0.9em
-`}
-font-size : 1.1em
-`
-
 const Text = styled.p`
   ${media.tablet`
 font-size : 0.9em
 `}
   ${media.phone`
-font-size : 0.73em
-margin-top : 5px
+font-size : 0.7em
 `}
   margin-top : 10px
   font-size : 1em
@@ -135,13 +125,13 @@ const Image = styled.img`
  height : 32vh
  border-radius : 5px
  ${media.tablet`
- width : 37%
- height : 22vh
+ width : 40%
+ height : 25vh
  border-radius : 3px
  `}
    ${media.phone`
-   width : 38%
-   height : 18vh
+   width : 40%
+   height : 17vh
    border-radius : 3px
  `} 
 `
@@ -150,18 +140,18 @@ const Details = styled.div`
   margin-left: 7%;
   margin-top: 5%;
   ${media.tablet`
-    margin-left: 5%;
+    margin-left: 2%;
   `}
   ${media.phone`
-  margin-top: 2%;
-    margin-left: 3%;
+  margin-bottom: 3%;
+  margin-left: 3%;
   `}
 `
 
 export default function update() {
   return (
     <Div>
-      <Header> Upcoming Activities </Header>
+      <Header> Upcoming Events </Header>
       <hr />
       <Contain>
         <Card>
@@ -175,6 +165,34 @@ export default function update() {
               />
 
               <Details>
+                <Countdown deadline={2020} />
+                <Text>
+                  bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
+                  cjrmdhbirnkubrgnhkr kljkhlmnlgbj
+                </Text>
+
+                <Flex>
+                  <Donate>Donate</Donate>
+                  <Donate>Calendar</Donate>
+                </Flex>
+              </Details>
+            </Flex>
+          </Container>
+        </Card>
+
+        <hr />
+        <Card>
+          <Title> TEACHERS DAY </Title>
+          <Container>
+            <Flex>
+              <Image
+                src={
+                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+                }
+              />
+
+              <Details>
+                <Countdown deadline={2020} />
                 <Text>
                   {" "}
                   bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
@@ -189,10 +207,9 @@ export default function update() {
             </Flex>
           </Container>
         </Card>
-
         <hr />
         <Card>
-          <Title> COLOUR DAY </Title>
+          <Title> WORLD BOOK DAY </Title>
           <Container>
             <Flex>
               <Image
@@ -202,32 +219,7 @@ export default function update() {
               />
 
               <Details>
-                <Text>
-                  {" "}
-                  bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
-                  cjrmdhbirnkubrgnhkr kljkhlmnlgbj{" "}
-                </Text>
-
-                <Flex>
-                  <Donate>Donate</Donate>
-                  <Donate>Calendar</Donate>
-                </Flex>
-              </Details>
-            </Flex>
-          </Container>
-        </Card>
-        <hr />
-        <Card>
-          <Title> COLOUR DAY </Title>
-          <Container>
-            <Flex>
-              <Image
-                src={
-                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                }
-              />
-
-              <Details>
+                <Countdown deadline={2020} />
                 <Text>
                   {" "}
                   bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
@@ -243,7 +235,7 @@ export default function update() {
           </Container>
         </Card>
       </Contain>
-      
+
       <Button>
         <Github> See More </Github>{" "}
       </Button>
