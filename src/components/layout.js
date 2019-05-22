@@ -23,7 +23,6 @@ const Layout = ({ children }) => (
           style={{
             margin: `0 auto`,
             maxWidth: 1150,
-            padding: `0px 1.0275rem 1.45rem`,
           }}
         >
           <Helmet>

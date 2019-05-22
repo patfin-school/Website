@@ -23,7 +23,7 @@ const Image = styled.img`
 height : 65vh
 `}
   ${media.phone`
-height : 45vh
+height : 40vh
 `}
 background-size : cover
 width : 100%
@@ -104,7 +104,7 @@ const IndexPage = () => (
         </Button>
       </Link>
     </Card>{" "}
-    <br />
+    
   </Div>
 )
 

@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { media } from "../../media_style"
 import Flex from "styled-flex-component"
 import { Card } from "react-bootstrap"
-import Countdown from "./countdown"
 
 const Header = styled.p`
   ${media.tablet`
@@ -25,7 +24,7 @@ const Div = styled.div`
 height: 235vh;
 `}
   ${media.phone`
-height: 190vh;
+height: 115vh;
 `} 
   background-color: #f8f8f9;
   color: black;
@@ -110,26 +109,12 @@ const Button = styled.div`
 
 const Contain = styled.div`
 margin-left : 2%
-margin-right : 2%
-`
-
-const Image = styled.img`
- width : 100%
- height : 60vh
- border-radius : 5px
- ${media.tablet`
- width : 100%
- height : 45vh
- border-radius : 3px
- `}
-   ${media.phone`
-   width : 100%
-   height : 30vh
- `} 
+margin-right : 5%
 `
 
 const Details = styled.div`
   margin-left: 7%;
+  margin-bottom: 5%;
   ${media.tablet`
     margin-left: 2%;
   `}
@@ -138,90 +123,146 @@ const Details = styled.div`
   margin-left: 3%;
   `}
 `
-var textStyle = {
-  position: "absolute",
-  top: "2%",
-  left: "63%",
-}
+
+const Date = styled.p`
+        text-align : center
+        font-size : 1.3em
+        color : white
+        ${media.tablet`
+        font-size : 1.3em
+        `}
+          ${media.phone`
+          font-size : 0.8em
+        `} 
+        `
+
+const Circle = styled.div`
+        width : 97px
+        height: 97px
+        padding-top: 5% 
+        margin-top: 7% 
+        margin-right: 2% 
+        border-radius: 70px 
+         background : #022b69
+        ${media.tablet`
+        font-size : 1em
+        `}
+          ${media.phone`
+          width : 60px
+          height: 55px
+          padding-top: 17px 
+          border-radius: 70px 
+          
+        `} 
+        `
+
+const Image = styled.p`
+color :  #022b69
+  font-size: 1.3em ${media.tablet`
+        font-size : 1.3em
+        `} ${media.phone`
+          font-size : 1.1em
+        `};
+`
+
+const ViewImage = styled.div`
+  text-align: right;
+  margin-right: 6%;
+  margin-bottom: 4%;
+`
 
 export default function update() {
   return (
     <Div>
       <Header> Upcoming Events </Header>
       <hr />
+
       <Contain>
-        <Card>
-          <Image
-            responsive
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-            }
-          />
-          <div style={textStyle}>
-            <Countdown date={"11, Oct"} />{" "}
-          </div>
-          <Details>
-            <Title> COLOUR DAY </Title>
-            <Text>
-              bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
-              cjrmdhbirnkubrgnhkr kljkhlmnlgbj
-            </Text>
+        <Flex>
+          <Circle>
+            <Date> 21 , Oct </Date>
+          </Circle>
 
-            <Flex justifyBetween>
-              <Donate>Donate</Donate>
-              <Donate>Calendar</Donate>
-            </Flex>
-          </Details>
-        </Card>
+          <Card>
+            <Details>
+              <Title> COLOUR DAY </Title> <hr />
+              <Text>
+                bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
+                cjrmdhbirnkubrgnhkr kljkhlmnlgbj
+              </Text>
+              <ViewImage>
+                <Image>
+                  {" "}
+                  <a href=""> View Previous Images > </a>{" "}
+                </Image>
+              </ViewImage>
+              <Flex justifyBetween>
+                <Donate>Donate</Donate>
+                <Donate>Calendar</Donate>
+              </Flex>
+            </Details>
+          </Card>
+        </Flex>
+      </Contain>
 
-        <hr />
-        <Card>
-          <Image
-            responsive
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-            }
-          />
-          <div style={textStyle}>
-            <Countdown date={"11, Oct"} />{" "}
-          </div>
-          <Details>
-            <Title> COLOUR DAY </Title>
-            <Text>
-              bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
-              cjrmdhbirnkubrgnhkr kljkhlmnlgbj
-            </Text>
+      <br />
 
-            <Flex justifyBetween>
-              <Donate>Donate</Donate>
-              <Donate>Calendar</Donate>
-            </Flex>
-          </Details>
-        </Card>
-        <hr />
-        <Card>
-          <Image
-            responsive
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-            }
-          />
-          <div style={textStyle}>
-            <Countdown date={"11, Oct"} />{" "}
-          </div>
-          <Details>
-            <Title> COLOUR DAY </Title>
-            <Text>
-              bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
-              cjrmdhbirnkubrgnhkr kljkhlmnlgbj
-            </Text>
+      <Contain>
+        <Flex>
+          <Circle>
+            <Date> 21 , Oct </Date>
+          </Circle>
 
-            <Flex justifyBetween>
-              <Donate>Donate</Donate>
-              <Donate>Calendar</Donate>
-            </Flex>
-          </Details>
-        </Card>
+          <Card>
+            <Details>
+              <Title> COLOUR DAY </Title> <hr />
+              <Text>
+                bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
+                cjrmdhbirnkubrgnhkr kljkhlmnlgbj
+              </Text>
+              <ViewImage>
+                <Image>
+                  {" "}
+                  <a href=""> View Previous Images > </a>{" "}
+                </Image>
+              </ViewImage>
+              <Flex justifyBetween>
+                <Donate>Donate</Donate>
+                <Donate>Calendar</Donate>
+              </Flex>
+            </Details>
+          </Card>
+        </Flex>
+      </Contain>
+
+      <br />
+
+      <Contain>
+        <Flex>
+          <Circle>
+            <Date> 21 , Oct </Date>
+          </Circle>
+
+          <Card>
+            <Details>
+              <Title> COLOUR DAY </Title> <hr />
+              <Text>
+                bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
+                cjrmdhbirnkubrgnhkr kljkhlmnlgbj
+              </Text>
+              <ViewImage>
+                <Image>
+                  {" "}
+                  <a href=""> View Previous Images > </a>{" "}
+                </Image>
+              </ViewImage>
+              <Flex justifyBetween>
+                <Donate>Donate</Donate>
+                <Donate>Calendar</Donate>
+              </Flex>
+            </Details>
+          </Card>
+        </Flex>
       </Contain>
       <br />
       <Button>
