@@ -25,11 +25,11 @@ const Div = styled.div`
 height: 140vh;
 `}
   ${media.phone`
-height: 125vh;
+height: 130vh;
 `} 
   background-color: #f8f8f9;
   color: black;
-  height: 170vh;
+  height: 175vh;
 `
 
 const Title = styled.p`
