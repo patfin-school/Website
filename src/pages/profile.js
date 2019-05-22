@@ -29,7 +29,7 @@ background-size : cover
 width : 100%
 height : 85vh
 `
- 
+
 
 const Button = styled.div`
   text-align: center;

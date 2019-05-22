@@ -2,8 +2,8 @@ import { css } from 'styled-components';
 
 const ScreenSizes = {
 	DESKTOP: 2200 ,
-	TABLET: 1000,
-	PHONE: 650 ,
+	TABLET: 900,
+	PHONE: 500 ,
 };
 
 const sizes = {

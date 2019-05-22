@@ -26,14 +26,14 @@ const Contact = () => (
               "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
           }}
         >
-          <h4 style={{ textAlign: "center", color: "#8c43ff" }}>Feedback</h4>
+          <h5 style={{ textAlign: "center", color: "#8c43ff" }}>Feedback</h5>
           <form
             name="Contact Form"
             data-netlify="true"
             action="/success"
             method="POST"
             data-netlify-honeypot="bot-field"
-            style={{ fontSize: "1.25rem", marginTop: "20px" }}
+            style={{ fontSize: "1.25rem", marginTop: "10px" }}
           >
             <input type="hidden" name="form-name" value="Contact Form" />
             <p>
@@ -45,7 +45,7 @@ const Contact = () => (
                   border: "1px solid #e6ecf8",
                   borderRadius: "5px",
                   width: "100%",
-                  height: "50px",
+                  height: "45px",
                 }}
                 type="text"
                 name="name"
@@ -60,15 +60,13 @@ const Contact = () => (
                   border: "1px solid #e6ecf8",
                   borderRadius: "5px",
                   width: "100%",
-                  height: "50px",
+                  height: "45px",
                 }}
                 type="email"
                 name="email"
               />
             </p>
-            <p>
-              <label>Message</label>
-            </p>
+              <p>Message</p>
             <p>
               <textarea
                 style={{
@@ -76,7 +74,7 @@ const Contact = () => (
                   borderRadius: "5px",
                   width: "100%",
                   maxWidth: "100%",
-                  minHeight: "100px",
+                  minHeight: "70px",
                 }}
                 type="text"
                 name="message"

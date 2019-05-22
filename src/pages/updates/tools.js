@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { media } from "../../media_style"
-import Flex, { FlexItem } from "styled-flex-component"
+import Flex from "styled-flex-component"
 import { Card } from "react-bootstrap"
 import Countdown from "./countdown"
 
@@ -22,14 +22,14 @@ const Header = styled.p`
 
 const Div = styled.div`
   ${media.tablet`
-height: 140vh;
+height: 235vh;
 `}
   ${media.phone`
-height: 135vh;
+height: 200vh;
 `} 
   background-color: #f8f8f9;
   color: black;
-  height: 175vh;
+  height: 250vh;
 `
 
 const Title = styled.p`
@@ -41,7 +41,6 @@ font-size : 1.1em
 `} 
 font-size : 1.4em
 text-align: center;
-  margin-top: 10px;
 `
 
 const Text = styled.p`
@@ -51,7 +50,6 @@ font-size : 0.9em
   ${media.phone`
 font-size : 0.7em
 `}
-  margin-top : 10px
   font-size : 1em
 `
 
@@ -75,8 +73,8 @@ const Github = styled.button`
     ${media.phone`
   border-radius: 3px;
   font-size : 1em
-  height : 47px
-  margin-top : 15px
+  height : 42px
+  margin-top : 5px
   `}
 `
 
@@ -101,7 +99,7 @@ const Donate = styled.button`
   border: 1.1px solid palevioletred;
   border-radius: 3px;
   font-size : 0.8em
-  height : 30px
+  height : 40px
   margin-top : 3px
   `}
 `
@@ -115,30 +113,23 @@ margin-left : 2%
 margin-right : 2%
 `
 
-const Container = styled.div`
-margin-left : 5%
-margin-right : 2%
-`
-
 const Image = styled.img`
- width : 40%
- height : 32vh
+ width : 100%
+ height : 60vh
  border-radius : 5px
  ${media.tablet`
- width : 40%
- height : 25vh
+ width : 100%
+ height : 45vh
  border-radius : 3px
  `}
    ${media.phone`
-   width : 40%
-   height : 17vh
-   border-radius : 3px
+   width : 100%
+   height : 30vh
  `} 
 `
 
 const Details = styled.div`
   margin-left: 7%;
-  margin-top: 5%;
   ${media.tablet`
     margin-left: 2%;
   `}
@@ -147,6 +138,11 @@ const Details = styled.div`
   margin-left: 3%;
   `}
 `
+var textStyle = {
+  position: "absolute",
+  top: "2%",
+  left: "63%",
+}
 
 export default function update() {
   return (
@@ -155,87 +151,79 @@ export default function update() {
       <hr />
       <Contain>
         <Card>
-          <Title> COLOUR DAY </Title>
-          <Container>
-            <Flex>
-              <Image
-                src={
-                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                }
-              />
+          <Image
+            responsive
+            src={
+              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+            }
+          />
+          <div style={textStyle}>
+            <Countdown date={"11, Oct"} />{" "}
+          </div>
+          <Details>
+            <Title> COLOUR DAY </Title>
+            <Text>
+              bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
+              cjrmdhbirnkubrgnhkr kljkhlmnlgbj
+            </Text>
 
-              <Details>
-                <Countdown  date = { '11, Oct' }/>
-                <Text>
-                  bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
-                  cjrmdhbirnkubrgnhkr kljkhlmnlgbj
-                </Text>
-
-                <Flex>
-                  <Donate>Donate</Donate>
-                  <Donate>Calendar</Donate>
-                </Flex>
-              </Details>
+            <Flex justifyBetween>
+              <Donate>Donate</Donate>
+              <Donate>Calendar</Donate>
             </Flex>
-          </Container>
+          </Details>
         </Card>
 
         <hr />
         <Card>
-          <Title> CAREER DAY </Title>
-          <Container>
-            <Flex>
-              <Image
-                src={
-                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1558468735/Patfin/IMG_20180607_092238.jpg"
-                }
-              />
+          <Image
+            responsive
+            src={
+              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+            }
+          />
+          <div style={textStyle}>
+            <Countdown date={"11, Oct"} />{" "}
+          </div>
+          <Details>
+            <Title> COLOUR DAY </Title>
+            <Text>
+              bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
+              cjrmdhbirnkubrgnhkr kljkhlmnlgbj
+            </Text>
 
-              <Details>
-                <Countdown  date = { '15, Dec' } />
-                <Text>
-                  {" "}
-                  bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
-                  cjrmdhbirnkubrgnhkr kljkhlmnlgbj{" "}
-                </Text>
-
-                <Flex>
-                  <Donate>Donate</Donate>
-                  <Donate>Calendar</Donate>
-                </Flex>
-              </Details>
+            <Flex justifyBetween>
+              <Donate>Donate</Donate>
+              <Donate>Calendar</Donate>
             </Flex>
-          </Container>
+          </Details>
         </Card>
         <hr />
         <Card>
-          <Title> WORLD BOOK DAY </Title>
-          <Container>
-            <Flex>
-              <Image
-                src={
-                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                }
-              />
+          <Image
+            responsive
+            src={
+              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+            }
+          />
+          <div style={textStyle}>
+            <Countdown date={"11, Oct"} />{" "}
+          </div>
+          <Details>
+            <Title> COLOUR DAY </Title>
+            <Text>
+              bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
+              cjrmdhbirnkubrgnhkr kljkhlmnlgbj
+            </Text>
 
-              <Details>
-                <Countdown   date = { '11, Jan' } />
-                <Text>
-                  {" "}
-                  bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
-                  cjrmdhbirnkubrgnhkr kljkhlmnlgbj{" "}
-                </Text>
-
-                <Flex>
-                  <Donate>Donate</Donate>
-                  <Donate>Calendar</Donate>
-                </Flex>
-              </Details>
+            <Flex justifyBetween>
+              <Donate>Donate</Donate>
+              <Donate>Calendar</Donate>
             </Flex>
-          </Container>
+          </Details>
         </Card>
       </Contain>
-<br />
+      <br />
       <Button>
         <Github> See More </Github>{" "}
       </Button>

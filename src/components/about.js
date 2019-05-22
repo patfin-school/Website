@@ -55,8 +55,8 @@ export default class about extends Component {
     // ============
     if (this.state.read === false) {
       return (
-        <Div>
-          <br />
+        <Div> 
+          <br /> <br />
           <Text>
             Patfin School Description Patfin School Description Patfin School
             Description Patfin School Description Patfin School Description
@@ -64,30 +64,8 @@ export default class about extends Component {
             Description Patfin School Description Patfin School Description
             Patfin School Description Patfin School Description Patfin School
             Description Patfin School Description Patfin School Description
-                      </Text>
-          <Text>
-            Patfin School Description Patfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-            Patfin School Description Patfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-            Patfin School Description Patfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-            
-          </Text>
-          <EndP>
-            Patfin School Description Patfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-          </EndP>
-          <Github
-            onClick={() => {
-              Press()
-            }}
-          >
-            {" "}
-            Continue Reading
-          </Github>
-          <br />
-          <br />
+            </Text>
+          <br /> <br />
         </Div>
       )
     } else {

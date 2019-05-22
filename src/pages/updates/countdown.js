@@ -8,13 +8,12 @@ class Clock extends Component {
     const Date = styled.p`
         text-align : center
         font-size : 1.3em
-        font-weight : bold
-        color : white
+        color : black
         ${media.tablet`
         font-size : 1.3em
         `}
           ${media.phone`
-          font-size : 1.1em
+          font-size : 1em
         `} 
         `
 
@@ -24,14 +23,14 @@ class Clock extends Component {
         padding-top: 5% 
         margin-left: 70% 
         border-radius: 70px 
-         background : #4682b4
+         background : #f8f8f9
         ${media.tablet`
         font-size : 1em
         `}
           ${media.phone`
           width : 70px
           height: 70px
-          padding-top: 8% 
+          padding-top: 27% 
           margin-left: 67% 
           border-radius: 70px 
         `} 
