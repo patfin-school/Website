@@ -28,7 +28,7 @@ const Nav = () => (
       <ul>
         <div>
           <Li>
-            <a>EvoHub</a>
+            <a>Patfin</a>
           </Li>
         </div>
 
