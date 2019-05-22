@@ -7,12 +7,15 @@ import { media } from "../media_style"
 const Div = styled.div`
   ${media.tablet`
 height : 73vh
+color : #4682b4
+
 `}
   ${media.phone`
 height : 52vh
 `}
 width : 100%
 height : 90vh
+color : #4682b4
 `
 
 const Image = styled.img`
@@ -61,34 +64,34 @@ const IndexPage = () => (
           <Image
             variant="top"
             src={
+              "https://res.cloudinary.com/dkfptto8m/image/upload/v1558519546/Patfin/IMG_20180221_095629.jpg"
+            }
+          />
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Image
+            variant="top"
+            src={
+              "https://res.cloudinary.com/dkfptto8m/image/upload/v1558519675/Patfin/IMG_20180305_080947.jpg"
+            }
+          />
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Image
+            variant="top"
+            src={
+              "https://res.cloudinary.com/dkfptto8m/image/upload/v1558519514/Patfin/IMG_20180221_090011.jpg"
+            }
+          />
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Image
+            variant="top"
+            src={
               "https://res.cloudinary.com/dkfptto8m/image/upload/v1558468750/Patfin/IMG_20180607_092307.jpg"
-            }
-          />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Image
-            variant="top"
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-            }
-          />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Image
-            variant="top"
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-            }
-          />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Image
-            variant="top"
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
             }
           />
         </Carousel.Item>

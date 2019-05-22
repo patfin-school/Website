@@ -83,8 +83,8 @@ const Project = styled.button`
   `}
     ${media.phone`
     border-radius: 3px;
-    font-size : 0.9em
-    height : 65px
+    font-size : 1em
+    height : 55px
   `}
 `
 
@@ -109,6 +109,20 @@ const Description = styled.p`
 `}
   ${media.phone`
   font-size : 0.9em
+`}
+`
+
+const Date = styled.p`
+  font-size : 1.3em
+  margin-top : 40px
+  margin-bottom :40px
+  color: #212529;
+  text-align: right
+  ${media.tablet`
+  font-size : 1.3em
+`}
+  ${media.phone`
+  font-size : 1.3em
 `}
 `
 
@@ -141,7 +155,7 @@ const StyledCard = styled(Card)`
   border-radius:  20px;
   ${media.tablet`
   width:  100%  
-  height: 90vh  
+  height: 80vh  
   background-color:  white;
   border-radius:  20px;
 `}
@@ -200,13 +214,14 @@ export default class projects extends Component {
                     <Title> Our Trip to AIT </Title>
                     <Card.Body>
                       <Description>
-                        Mobile Restaurant App for Students to search and rate
-                        meals within restaurants and also for restaurants owners
-                        to create searchable digital Restaurants
+                        Details on Excursion Details on Excursion Details on
+                        Excursion Details on Excursion Details on Excursion
+                        Details on Excursion Details on Excursion Details on
+                        Excursion Details on Excursion Details on Excursion
                       </Description>
-                      <Description  >
+                      <Date >
                         <b> Date: </b> 01/01/01
-                      </Description>
+                      </Date>
                       <Project> Read More </Project>
                     </Card.Body>
                   </StyledCard>
@@ -224,13 +239,14 @@ export default class projects extends Component {
                     <Title> Our Trip to AIT </Title>
                     <Card.Body>
                       <Description>
-                        Mobile Restaurant App for Students to search and rate
-                        meals within restaurants and also for restaurants owners
-                        to create searchable digital Restaurants
+                        Details on Excursion Details on Excursion Details on
+                        Excursion Details on Excursion Details on Excursion
+                        Details on Excursion Details on Excursion Details on
+                        Excursion Details on Excursion Details on Excursion
                       </Description>
-                      <Description>
+                      <Date>
                         <b> Date: </b> 01/01/01
-                      </Description>
+                      </Date>
                       <Project> Read More </Project>
                     </Card.Body>
                   </StyledCard>
@@ -247,13 +263,14 @@ export default class projects extends Component {
                     <Title> Our Trip to AIT </Title>
                     <Card.Body>
                       <Description>
-                        Mobile Restaurant App for Students to search and rate
-                        meals within restaurants and also for restaurants owners
-                        to create searchable digital Restaurants
+                        Details on Excursion Details on Excursion Details on
+                        Excursion Details on Excursion Details on Excursion
+                        Details on Excursion Details on Excursion Details on
+                        Excursion Details on Excursion Details on Excursion
                       </Description>
-                      <Description>
+                      <Date>
                         <b> Date: </b> 01/01/01
-                      </Description>
+                      </Date>
                       <Project> Read More </Project>
                     </Card.Body>
                   </StyledCard>
@@ -270,13 +287,14 @@ export default class projects extends Component {
                     <Title> Our Trip to AIT </Title>
                     <Card.Body>
                       <Description>
-                        Mobile Restaurant App for Students to search and rate
-                        meals within restaurants and also for restaurants owners
-                        to create searchable digital Restaurants
+                        Details on Excursion Details on Excursion Details on
+                        Excursion Details on Excursion Details on Excursion
+                        Details on Excursion Details on Excursion Details on
+                        Excursion Details on Excursion Details on Excursion
                       </Description>
-                      <Description>
+                      <Date>
                         <b> Date: </b> 01/01/01
-                      </Description>
+                      </Date>
                       <Project> Read More </Project>
                     </Card.Body>
                   </StyledCard>

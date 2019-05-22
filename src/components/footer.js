@@ -3,18 +3,18 @@ import styled from "styled-components"
 
 const Div = styled.div`
     width : 100%
-    height : 20vh
+    height : 15vh
     background-color: #141E64
     color : white
     text-align: center;
 `
 
 const Contain = styled.div`
-  padding-top: 15px;
+  padding-top: 25px;
 `
 
 const Copyright = styled.div`
-  font-size: 0.8em;
+  font-size: 0.9em;
 `
 
 const Text = styled.div`

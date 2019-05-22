@@ -4,60 +4,43 @@ import styled from "styled-components"
 import { media } from "../../media_style"
 
 class Clock extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    }
-  }
-  componentWillMount() {
-    this.getTimeUntil(this.props.deadline)
-  }
-  componentDidMount() {
-    setInterval(() => this.getTimeUntil(this.props.deadline), 1000)
-  }
-  leading0(num) {
-    return num < 10 ? "0" + num : num
-  }
-  getTimeUntil(deadline) {
-    const time = Date.parse(deadline) - Date.parse(new Date())
-    if (time < 0) {
-      this.setState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-    } else {
-      const seconds = Math.floor((time / 1000) % 60)
-      const minutes = Math.floor((time / 1000 / 60) % 60)
-      const hours = Math.floor((time / (1000 * 60 * 60)) % 24)
-      const days = Math.floor(time / (1000 * 60 * 60 * 24))
-      this.setState({ days, hours, minutes, seconds })
-    }
-  }
   render() {
     const Date = styled.p`
-        margin-right : 30px
-        font-size : 1.3em
+        text-align : center
+        font-size : 1.4em
+        font-weight : bold
+        color : white
         ${media.tablet`
-        margin-right : 25px
+        font-size : 1.3em
+        `}
+          ${media.phone`
+          font-size : 1.1em
+        `} 
+        `
+
+    const Div = styled.div`
+        width : 85px
+        height: 90px
+        padding-top: 7% 
+        margin-left: 70% 
+        border-radius: 70px 
+         background : #4682b4
+        ${media.tablet`
         font-size : 1em
         `}
           ${media.phone`
-          margin-right : 10px
-          font-size : 0.9em
+          width : 70px
+          height: 70px
+          padding-top: 8% 
+          margin-left: 67% 
+          border-radius: 70px 
         `} 
         `
 
     return (
-      <Flex>
-        <Date>{this.leading0(this.state.days)} Days</Date>
-
-        <Date>{this.leading0(this.state.hours)} Hours</Date>
-
-        <Date>{this.leading0(this.state.minutes)} Minutes</Date>
-
-        <Date>{this.leading0(this.state.seconds)} Seconds</Date>
-      </Flex>
+      <Div>
+        <Date> {this.props.date} </Date>
+      </Div>
     )
   }
 }

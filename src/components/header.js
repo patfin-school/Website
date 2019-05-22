@@ -1,19 +1,19 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby'
+import 'semantic-ui-css/semantic.min.css'
+import React from 'react'
+import { Container, Button } from 'semantic-ui-react'
+import styled from 'styled-components'
 
-const Header = ({ siteTitle }) => (
-  <header
+
+const Header = () => (
+  <div
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `#172A3B`,
     }}
   >
-    <div
+    <Container
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `1.65rem 1.0875rem`,
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -24,19 +24,27 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <span role="img" aria-label="peace">
+             
+          </span>{' '}
+          Patfin
+        </Link>
+        <Link style={{ textDecoration: 'none' }} to="/blog/">
+          <Button
+            style={{
+              float: 'right',
+              fontSize: '1.25rem',
+              borderRadius: '1rem',
+            }}
+            
+            inverted
+          >
+            Blog
+          </Button>
         </Link>
       </h1>
-    </div>
-  </header>
+    </Container>
+  </div>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
+ 
 export default Header

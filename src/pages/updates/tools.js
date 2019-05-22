@@ -25,7 +25,7 @@ const Div = styled.div`
 height: 140vh;
 `}
   ${media.phone`
-height: 130vh;
+height: 110vh;
 `} 
   background-color: #f8f8f9;
   color: black;
@@ -165,7 +165,7 @@ export default function update() {
               />
 
               <Details>
-                <Countdown deadline={2020} />
+                <Countdown  date = { '11, Oct' }/>
                 <Text>
                   bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
                   cjrmdhbirnkubrgnhkr kljkhlmnlgbj
@@ -192,7 +192,7 @@ export default function update() {
               />
 
               <Details>
-                <Countdown deadline={2020} />
+                <Countdown  date = { '15, Dec' } />
                 <Text>
                   {" "}
                   bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
@@ -219,7 +219,7 @@ export default function update() {
               />
 
               <Details>
-                <Countdown deadline={2020} />
+                <Countdown   date = { '11, Jan' } />
                 <Text>
                   {" "}
                   bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb

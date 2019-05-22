@@ -1,14 +1,12 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
 import { Container, Grid } from 'semantic-ui-react'
+import styled from 'styled-components'
 
 const Contact = () => (
-  <Layout>
-    <SEO title="Contact" />
-    <div style={{ height: '100vh' }}>
-      <Container style={{ paddingTop: '50px' }}>
+  
+    <div style={{ height: '65vh' }}>
+      <Container style={{ paddingTop: '20px' }}>
         <Grid style={{ padding: '20px' }} centered columns={1}>
           <Grid.Column
             style={{
@@ -18,10 +16,10 @@ const Contact = () => (
                 '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
             }}
           >
-            <h2 style={{ textAlign: 'center', color: '#8c43ff' }}>
-              Contact Me
+            <h2 style={{ textAlign: 'center', color: '#8c43ff' }}> 
+              Feedback
             </h2>
-            <form
+            <form 
               name="Contact Form"
               data-netlify="true"
               action="/success"
@@ -39,6 +37,7 @@ const Contact = () => (
                     border: '1px solid #e6ecf8',
                     borderRadius: '5px',
                     width: '100%',
+                    height: '50px',
                   }}
                   type="text"
                   name="name"
@@ -53,6 +52,7 @@ const Contact = () => (
                     border: '1px solid #e6ecf8',
                     borderRadius: '5px',
                     width: '100%',
+                    height: '50px',
                   }}
                   type="email"
                   name="email"
@@ -94,7 +94,6 @@ const Contact = () => (
         </Grid>
       </Container>
     </div>
-  </Layout>
 )
 
 export default Contact
