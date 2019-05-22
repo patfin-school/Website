@@ -44,8 +44,8 @@ const Github = styled.button`
   margin: 0 1em;
   padding: 0.25em 1em;
   font-size : 0.9em
-  width : 40%
-  height : 60px
+  width : 30%
+  height : 42px
   font-weight : bold
 `
 

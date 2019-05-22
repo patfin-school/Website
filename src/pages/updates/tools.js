@@ -25,7 +25,7 @@ const Div = styled.div`
 height: 235vh;
 `}
   ${media.phone`
-height: 200vh;
+height: 190vh;
 `} 
   background-color: #f8f8f9;
   color: black;
@@ -64,7 +64,7 @@ const Github = styled.button`
   width : 35%
   height : 60px
   margin-left : 10%
-  margin-top : 2%
+  margin-top : 1%
   ${media.tablet`
   border-radius: 3px;
   font-size : 1.1em
