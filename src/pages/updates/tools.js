@@ -21,14 +21,22 @@ const Header = styled.p`
 
 const Div = styled.div`
   ${media.tablet`
-height: 235vh;
+height: 110vh;
+padding-left : 10%
+padding-left : 10%
+padding-right : 5%
 `}
   ${media.phone`
-height: 115vh;
+padding-right : 1%
+padding-left : 1%
+height: 100vh;
 `} 
+padding-left : 20%
+padding-right : 5%
   background-color: #f8f8f9;
   color: black;
-  height: 250vh;
+  height: 115vh;
+  margin-top : 6%
 `
 
 const Title = styled.p`

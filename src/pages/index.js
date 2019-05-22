@@ -11,6 +11,7 @@ import Footer from "../components/footer"
 import About from "../components/about"
 import Contact from "../components/contact"
 import Header from "../components/header"
+import Connect from "../components/connect"
 
 import All from "../components/banner/all"
 
@@ -28,6 +29,7 @@ const IndexPage = () => (
         <Contact />
       </>
     </Layout>
+    <Connect />
     <Footer />
   </div>
 )

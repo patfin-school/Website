@@ -8,7 +8,6 @@ const Div = styled.div`
   ${media.tablet`
 height : 73vh
 color : #4682b4
-
 `}
   ${media.phone`
 height : 52vh

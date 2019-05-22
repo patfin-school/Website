@@ -7,7 +7,7 @@ import Tools from "./tools"
 export default function update() {
   return (
     <div>
-      <Tools /> <br />
+      <Tools /> <br /> <br />
 
       <Projects />
     </div>

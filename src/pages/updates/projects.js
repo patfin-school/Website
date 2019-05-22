@@ -14,7 +14,7 @@ const Header = styled.h3`
 const Div = styled.div`
   background-color: #2c3e50;
   width: 100%;
-  height: 125vh;
+  height: 155vh;
   ${media.tablet`
     height : 120vh
   `}
@@ -133,7 +133,8 @@ margin-left : 7%
 
 const StyledCard = styled(Card)`
   width:  100%  
-  height: 105vh  
+  height: 115vh  
+  padding-right : 20%
   background-color:  white;
   border-radius:  20px;
   ${media.tablet`
