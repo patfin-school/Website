@@ -6,10 +6,10 @@ import { media } from "../media_style"
 
 const Div = styled.div`
   ${media.tablet`
-height : 73vh
+height : 75vh
 `}
   ${media.phone`
-  height: 71vh
+  height: 77vh
 `}
 height : 80vh
 `
@@ -26,7 +26,7 @@ const Contact = () => (
               "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
           }}
         >
-          <h2 style={{ textAlign: "center", color: "#8c43ff" }}>Feedback</h2>
+          <h4 style={{ textAlign: "center", color: "#8c43ff" }}>Feedback</h4>
           <form
             name="Contact Form"
             data-netlify="true"

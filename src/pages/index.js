@@ -24,7 +24,7 @@ const IndexPage = () => (
         {" "}
         <br />
         <About />
-        <Update />
+        <Update /><br />
         <Contact />
       </>
     </Layout>

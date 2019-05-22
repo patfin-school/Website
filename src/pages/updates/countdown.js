@@ -7,7 +7,7 @@ class Clock extends Component {
   render() {
     const Date = styled.p`
         text-align : center
-        font-size : 1.4em
+        font-size : 1.3em
         font-weight : bold
         color : white
         ${media.tablet`
@@ -19,9 +19,9 @@ class Clock extends Component {
         `
 
     const Div = styled.div`
-        width : 85px
-        height: 90px
-        padding-top: 7% 
+        width : 97px
+        height: 97px
+        padding-top: 5% 
         margin-left: 70% 
         border-radius: 70px 
          background : #4682b4

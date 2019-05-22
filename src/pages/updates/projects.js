@@ -301,7 +301,7 @@ export default class projects extends Component {
                 </Carousel.Item>
               </Carousel>
             </Slider>
-          </Flex>
+          </Flex> 
         </Div>
       </div>
     )
