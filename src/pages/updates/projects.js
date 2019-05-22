@@ -14,12 +14,12 @@ const Header = styled.h3`
 const Div = styled.div`
   background-color: #2c3e50;
   width: 100%;
-  height: 120vh;
+  height: 125vh;
   ${media.tablet`
     height : 120vh
   `}
   ${media.phone`
-    height : 92vh
+    height : 97vh
   `}
 `
 
@@ -119,10 +119,10 @@ const Date = styled.p`
   color: #212529;
   text-align: right
   ${media.tablet`
-  font-size : 1.3em
+  font-size : 1.2em
 `}
   ${media.phone`
-  font-size : 1.3em
+  font-size : 1.1em
 `}
 `
 
@@ -150,18 +150,18 @@ const Note = styled.p`
 
 const StyledCard = styled(Card)`
   width:  100%  
-  height: 100vh  
+  height: 105vh  
   background-color:  white;
   border-radius:  20px;
   ${media.tablet`
   width:  100%  
-  height: 80vh  
+  height: 92vh  
   background-color:  white;
   border-radius:  20px;
 `}
   ${media.phone`
   width:  100%  
-  height: 75vh  
+  height: 80vh  
   background-color:  white;
   border-radius:  20px;
 `}
