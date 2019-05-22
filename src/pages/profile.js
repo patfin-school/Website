@@ -25,9 +25,16 @@ height : 65vh
   ${media.phone`
 height : 45vh
 `}
+background-size : cover
 width : 100%
 height : 85vh
 `
+var textStyle = {
+  position: "absolute",
+  alignItems: "center",
+  top: "70%",
+  left: "30%",
+}
 
 const Button = styled.div`
   text-align: center;
@@ -55,7 +62,7 @@ const IndexPage = () => (
           <Image
             variant="top"
             src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+              "https://res.cloudinary.com/dkfptto8m/image/upload/v1558522007/Patfin/banner.png"
             }
           />
         </Carousel.Item>
@@ -98,6 +105,7 @@ const IndexPage = () => (
       </Carousel>{" "}
       <Link to="/">
         <Button>
+          <h5 style={textStyle}> Raising Future Leaders </h5>
           <Github> View Gallery </Github>{" "}
         </Button>
       </Link>

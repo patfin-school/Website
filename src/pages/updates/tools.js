@@ -25,7 +25,7 @@ const Div = styled.div`
 height: 140vh;
 `}
   ${media.phone`
-height: 110vh;
+height: 125vh;
 `} 
   background-color: #f8f8f9;
   color: black;

@@ -11,10 +11,10 @@ const Text = styled.p`
   font-size: 1.1em;
   color: #212529;
   ${media.tablet`
-  font-size: 1.1em;
+  font-size: 1em;
   `}
   ${media.phone`
-    font-size: 0.9em;
+    font-size: 0.75em;
   `}
 `
 
@@ -64,12 +64,7 @@ export default class about extends Component {
             Description Patfin School Description Patfin School Description
             Patfin School Description Patfin School Description Patfin School
             Description Patfin School Description Patfin School Description
-            Patfin School DescriptionPatfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-            Patfin School Description Patfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-            Patfin School Description
-          </Text>
+                      </Text>
           <Text>
             Patfin School Description Patfin School Description Patfin School
             Description Patfin School Description Patfin School Description
@@ -77,11 +72,7 @@ export default class about extends Component {
             Description Patfin School Description Patfin School Description
             Patfin School Description Patfin School Description Patfin School
             Description Patfin School Description Patfin School Description
-            Patfin School DescriptionPatfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-            Patfin School Description Patfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-            Patfin School Description
+            
           </Text>
           <EndP>
             Patfin School Description Patfin School Description Patfin School

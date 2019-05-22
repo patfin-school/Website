@@ -19,7 +19,7 @@ const Div = styled.div`
     height : 120vh
   `}
   ${media.phone`
-    height : 90vh
+    height : 92vh
   `}
 `
 
@@ -161,7 +161,7 @@ const StyledCard = styled(Card)`
 `}
   ${media.phone`
   width:  100%  
-  height: 70vh  
+  height: 75vh  
   background-color:  white;
   border-radius:  20px;
 `}
