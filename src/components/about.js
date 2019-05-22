@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
+import { media } from "../media_style"
 
 const Div = styled.div`
     padding-top : 10px 
@@ -7,8 +8,14 @@ const Div = styled.div`
 `
 
 const Text = styled.p`
-  font-size: 0.9em;
-  color: #212529;
+  font-size: 1.1em;
+  color: #212529; 
+  ${media.tablet`
+  font-size: 1.1em;
+  `}
+    ${media.phone`
+    font-size: 0.9em;
+  `} 
 `
 
 const EndP = styled.p`

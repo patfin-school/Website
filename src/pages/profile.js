@@ -12,7 +12,7 @@ height : 73vh
 height : 52vh
 `}
 width : 100%
-height : 87vh
+height : 90vh
 `
 
 const Image = styled.img`
@@ -23,7 +23,7 @@ height : 65vh
 height : 45vh
 `}
 width : 100%
-height : 77vh
+height : 85vh
 `
 
 const Button = styled.div`
@@ -61,7 +61,7 @@ const IndexPage = () => (
           <Image
             variant="top"
             src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+              "https://res.cloudinary.com/dkfptto8m/image/upload/v1558468750/Patfin/IMG_20180607_092307.jpg"
             }
           />
         </Carousel.Item>

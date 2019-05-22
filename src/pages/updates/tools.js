@@ -22,10 +22,10 @@ const Header = styled.p`
 
 const Div = styled.div`
   ${media.tablet`
-height: 125vh;
+height: 140vh;
 `}
   ${media.phone`
-height: 120vh;
+height: 130vh;
 `} 
   background-color: #f8f8f9;
   color: black;
@@ -182,12 +182,12 @@ export default function update() {
 
         <hr />
         <Card>
-          <Title> TEACHERS DAY </Title>
+          <Title> CAREER DAY </Title>
           <Container>
             <Flex>
               <Image
                 src={
-                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1558468735/Patfin/IMG_20180607_092238.jpg"
                 }
               />
 
@@ -235,7 +235,7 @@ export default function update() {
           </Container>
         </Card>
       </Contain>
-
+<br />
       <Button>
         <Github> See More </Github>{" "}
       </Button>

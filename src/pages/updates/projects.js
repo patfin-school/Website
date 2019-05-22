@@ -16,7 +16,7 @@ const Div = styled.div`
   width: 100%;
   height: 120vh;
   ${media.tablet`
-    height : 115vh
+    height : 120vh
   `}
   ${media.phone`
     height : 90vh

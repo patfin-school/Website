@@ -44,7 +44,7 @@ class Clock extends Component {
         `}
           ${media.phone`
           margin-right : 10px
-          font-size : 0.7em
+          font-size : 0.9em
         `} 
         `
 

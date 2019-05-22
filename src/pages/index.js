@@ -9,18 +9,21 @@ import Profile from "./profile"
 import Update from "./updates/update"
 import Footer from "../components/footer"
 import About from "../components/about"
+import Contact from "../components/contact"
 
 import All from "../components/banner/all"
-
 
 const IndexPage = () => (
   <div>
     <Profile />
     <Layout>
       <SEO title="Home" />
-      <> <br />
+      <>
+        {" "}
+        <br />
         <About />
         <Update />
+        <Contact />
       </>
     </Layout>
     <Footer />
