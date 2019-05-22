@@ -29,12 +29,7 @@ background-size : cover
 width : 100%
 height : 85vh
 `
-var textStyle = {
-  position: "absolute",
-  alignItems: "center",
-  top: "70%",
-  left: "30%",
-}
+ 
 
 const Button = styled.div`
   text-align: center;
@@ -105,7 +100,6 @@ const IndexPage = () => (
       </Carousel>{" "}
       <Link to="/">
         <Button>
-          <h5 style={textStyle}> Raising Future Leaders </h5>
           <Github> View Gallery </Github>{" "}
         </Button>
       </Link>
