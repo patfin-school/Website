@@ -4,12 +4,12 @@ import styled from "styled-components"
 
 const Button = styled.button`
   background: transparent;
-  border-radius: 7px;
+  border-radius: 5px;
   border: 1.5px solid palevioletred;
   color: palevioletred;
   margin: 0 1em;
   padding: 0.25em 1em;
-  font-size: 17px;
+  font-size: 15px;
 `
 
 const Div = styled.div`
@@ -33,8 +33,7 @@ const Nav = () => (
         </div>
 
         <div>
-          <a>FAQ</a>
-
+          <a>Gallery</a>
           <Button href="#">Login</Button>
         </div>
       </ul>
@@ -53,13 +52,13 @@ const Nav = () => (
           justify-content: space-between;
         }
         nav > ul {
-          padding: 4px 16px;
+          padding: 0px  
         }
          
         a {
           color: #123abc;
           text-decoration: none;
-          font-size: 17px;
+          font-size: 14px;
         }
       `}</style>
     </nav>

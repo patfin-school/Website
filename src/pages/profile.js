@@ -6,7 +6,7 @@ import { media } from "../media_style"
 
 const Div = styled.div`
   ${media.tablet`
-height : 73vh
+height : 77vh
 color : #4682b4
 `}
   ${media.phone`
@@ -19,16 +19,22 @@ color : #4682b4
 
 const Image = styled.img`
   ${media.tablet`
-height : 65vh
+height : 53vh
+max-width : 80%
+margin-left : 10%
 `}
   ${media.phone`
-height : 40vh
+height : 37vh 
+max-width : 100%
+margin-left : 0%
 `}
 background-size : cover
 width : 100%
-height : 85vh
+max-width : 77%
+margin-left : 10%
+padding-top : 5%
+height : 75vh
 `
-
 
 const Button = styled.div`
   text-align: center;
@@ -48,61 +54,27 @@ const Github = styled.button`
   font-weight : bold
 `
 
+const StyledCard = styled(Card)`
+background: linear-gradient(to bottom,#b2eeb4,#1f86b3);
+`
+ 
 const IndexPage = () => (
   <Div>
-    <Card>
-      <Carousel>
-        <Carousel.Item>
+    <StyledCard>
+       
           <Image
             variant="top"
             src={
               "https://res.cloudinary.com/dkfptto8m/image/upload/v1558522007/Patfin/banner.png"
             }
           />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Image
-            variant="top"
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1558519546/Patfin/IMG_20180221_095629.jpg"
-            }
-          />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Image
-            variant="top"
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1558519675/Patfin/IMG_20180305_080947.jpg"
-            }
-          />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Image
-            variant="top"
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1558519514/Patfin/IMG_20180221_090011.jpg"
-            }
-          />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Image
-            variant="top"
-            src={
-              "https://res.cloudinary.com/dkfptto8m/image/upload/v1558468750/Patfin/IMG_20180607_092307.jpg"
-            }
-          />
-        </Carousel.Item>
-      </Carousel>{" "}
+ 
       <Link to="/">
         <Button>
-          <Github> View Gallery </Github>{" "}
+          <Github> Gallery </Github>{" "}
         </Button>
       </Link>
-    </Card>{" "}
+    </StyledCard> 
     
   </Div>
 )

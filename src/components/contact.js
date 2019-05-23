@@ -6,12 +6,12 @@ import { media } from "../media_style"
 
 const Div = styled.div`
   ${media.tablet`
-height : 75vh
+height : 56vh
 `}
   ${media.phone`
-  height: 77vh
+  height: 70vh
 `}
-height : 80vh
+height : 57vh
 `
 
 const Contact = () => (

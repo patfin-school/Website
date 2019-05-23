@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { media } from "../../media_style"
 import Flex from "styled-flex-component"
 import { Card } from "react-bootstrap"
+import { Icon } from "semantic-ui-react"
 
 const Header = styled.p`
   ${media.tablet`
@@ -21,7 +22,7 @@ const Header = styled.p`
 
 const Div = styled.div`
   ${media.tablet`
-height: 110vh;
+height: 105vh;
 padding-left : 10%
 padding-left : 10%
 padding-right : 5%
@@ -36,7 +37,7 @@ padding-right : 5%
   background-color: #f8f8f9;
   color: black;
   height: 115vh;
-  margin-top : 6%
+  margin-top: 6%;
 `
 
 const Title = styled.p`
@@ -117,7 +118,7 @@ const Button = styled.div`
 
 const Contain = styled.div`
 margin-left : 2%
-margin-right : 5%
+margin-right : 2%
 `
 
 const Details = styled.div`
@@ -140,7 +141,7 @@ const Date = styled.p`
         font-size : 1.3em
         `}
           ${media.phone`
-          font-size : 0.8em
+          font-size : 0.7em
         `} 
         `
 
@@ -154,11 +155,13 @@ const Circle = styled.div`
          background : #022b69
         ${media.tablet`
         font-size : 1em
+        width : 97px
+        height: 85px
         `}
           ${media.phone`
           width : 60px
-          height: 55px
-          padding-top: 17px 
+          height: 45px
+          padding-top: 14px 
           border-radius: 70px 
           
         `} 
@@ -169,14 +172,14 @@ color :  #022b69
   font-size: 1.3em ${media.tablet`
         font-size : 1.3em
         `} ${media.phone`
-          font-size : 1.1em
+          font-size : 0.5em
         `};
 `
 
 const ViewImage = styled.div`
-  text-align: right;
   margin-right: 6%;
   margin-bottom: 4%;
+  margin-left: 10%;
 `
 
 export default function update() {
@@ -190,6 +193,38 @@ export default function update() {
           <Circle>
             <Date> 21 , Oct </Date>
           </Circle>
+          <Card>
+            <Details>
+              <Title> COLOUR DAY </Title> <hr />
+              <Text>
+                bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
+                cjrmdhbirnkubrgnhkr kljkhlmnlgbj
+              </Text>
+              <ViewImage>
+                <Flex>
+                  <Image>
+                    {" "}
+                    <a href=""> Previous Images </a>{" "}
+                  </Image>
+                  <Icon name="arrow alternate circle right outline icon " size="grey" link color="green" style={{ marginLeft : '2%'}} />
+                </Flex>
+              </ViewImage>
+              <Flex justifyBetween>
+                <Donate>Donate</Donate>
+                <Donate>Calendar</Donate>
+              </Flex>
+            </Details>
+          </Card>
+        </Flex>
+      </Contain>
+
+      <br />
+
+      <Contain>
+        <Flex>
+          <Circle>
+            <Date> 21 , Oct </Date>
+          </Circle>
 
           <Card>
             <Details>
@@ -201,7 +236,7 @@ export default function update() {
               <ViewImage>
                 <Image>
                   {" "}
-                  <a href=""> View Previous Images > </a>{" "}
+                  <a href=""> Previous Images > </a>{" "}
                 </Image>
               </ViewImage>
               <Flex justifyBetween>
@@ -231,37 +266,7 @@ export default function update() {
               <ViewImage>
                 <Image>
                   {" "}
-                  <a href=""> View Previous Images > </a>{" "}
-                </Image>
-              </ViewImage>
-              <Flex justifyBetween>
-                <Donate>Donate</Donate>
-                <Donate>Calendar</Donate>
-              </Flex>
-            </Details>
-          </Card>
-        </Flex>
-      </Contain>
-
-      <br />
-
-      <Contain>
-        <Flex>
-          <Circle>
-            <Date> 21 , Oct </Date>
-          </Circle>
-
-          <Card>
-            <Details>
-              <Title> COLOUR DAY </Title> <hr />
-              <Text>
-                bla bla bla bla jmgrbkgjkdbsunkbhseefkseekfsebnhkeb
-                cjrmdhbirnkubrgnhkr kljkhlmnlgbj
-              </Text>
-              <ViewImage>
-                <Image>
-                  {" "}
-                  <a href=""> View Previous Images > </a>{" "}
+                  <a href=""> Previous Images > </a>{" "}
                 </Image>
               </ViewImage>
               <Flex justifyBetween>

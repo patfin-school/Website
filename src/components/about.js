@@ -4,7 +4,6 @@ import { media } from "../media_style"
 import { Card } from "react-bootstrap"
 
 const Div = styled.div`
-    padding-top : 10px 
     padding-bottom : 10px 
 `
 
@@ -15,9 +14,13 @@ const Text = styled.p`
   margin-right : 2%
   ${media.tablet`
   font-size: 1em;
+  margin-left : 3.5%
+  margin-right : 3.5%
   `}
   ${media.phone`
     font-size: 0.75em;
+    margin-left : 7%
+    margin-right : 7%
   `}
 `
 
@@ -41,7 +44,7 @@ const Title = styled.h5`
 `
 
 const Button = styled.div`
-text-align : center
+  text-align: center;
 `
 
 const Map = styled.button`
@@ -69,6 +72,7 @@ const Map = styled.button`
   border-radius: 3px;
   font-size : 1.1em
   height : 40px
+  width : 57%
   margin-top : 3px
   `}
 `
@@ -95,14 +99,19 @@ export default function about() {
           <div style={{ color: "white", marginLeft: "2%" }}>
             <ul> Take a bus heading towards Lasu </ul>{" "}
             <ul> Stop at Akesan Junction </ul>
-            <ul> Cross over to the left i.e Akesan Bustop  </ul>
-            <ul>  Pick a bike heading to Patfin School or 11, Oyelami Street  </ul>
+            <ul> Cross over to the left i.e Akesan Bustop </ul>
+            <ul>
+              {" "}
+              Pick a bike heading to Patfin School or 11, Oyelami Street{" "}
+            </ul>
           </div>
-          <Button> <Map> Google Map </Map> </Button>
+          <Button>
+            {" "}
+            <Map> Google Map </Map>{" "}
+          </Button>
         </Card>
-
       </Contain>
-      <br /> <br />
+     
     </Div>
   )
 }

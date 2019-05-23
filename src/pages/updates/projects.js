@@ -134,18 +134,21 @@ margin-left : 7%
 
 const StyledCard = styled(Card)`
   width:  100%  
+  max-width:  90%  
   height: 115vh  
-  padding-right : 20%
+  margin-right : 25%
   background-color:  white;
   border-radius:  20px;
   ${media.tablet`
   width:  100%  
+  max-width:  100%  
   height: 92vh  
   background-color:  white;
   border-radius:  20px;
 `}
   ${media.phone`
   padding-right : 0%
+  max-width:  100%  
   width:  100%  
   height: 70vh  
   background-color:  white;

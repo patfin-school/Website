@@ -3,12 +3,19 @@ import styled from "styled-components"
 import { Icon } from "semantic-ui-react"
 import Flex from "styled-flex-component"
 import Link from "gatsby"
+import { media } from '../media_style'
 
 const Div = styled.div`
-  margin-top: 5%
-  margin-left: 15%
-  margin-bottom: 5%
-  text-align: center
+  margin-top: 2%
+  margin-left: 35%
+  margin-bottom: 2%
+  text-align: center 
+  ${media.tablet`
+  margin-left: 27%;
+`}
+  ${media.phone`
+  margin-left: 17%;
+`}
 `
 
 const Text = styled.p`
@@ -17,20 +24,37 @@ text-align: center
 font-size: 1.4em
 `
 
+const IconContain = styled.div`
+  margin-left: 5%;
+  margin-right: 5%;
+  ${media.tablet`
+  margin-left: 5%;
+  margin-right: 5%;
+`}
+  ${media.phone`
+  margin-left: 3%;
+  margin-right: 3%;
+`}
+`
 export default function connect() {
   return (
     <>
       <Text> Connect with us </Text> <hr />
       <Div>
-        <Flex>
-  
-            <Icon name="instagram" size="huge" link color="green"  /> 
-            
-            <Icon name="facebook" size="huge"  link  color="blue"   />
-            
-            <Icon name="google plus square" link  size="huge" color="red"  /> 
-            
-            <Icon name="twitter" size="huge"  link color="blue"   />
+        <Flex  >
+          <IconContain>
+            <Icon name="instagram" size="big" link color="green" />
+          </IconContain>
+          <IconContain>
+            <Icon name="facebook" size="big" link color="blue" />
+          </IconContain>
+          <IconContain>
+            <Icon name="google plus square" link size="big" color="red" />
+          </IconContain>
+
+          <IconContain>
+            <Icon name="twitter" size="big" link color="blue" />
+          </IconContain>
         </Flex>
       </Div>
     </>
