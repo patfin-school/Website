@@ -4,6 +4,7 @@ import { media } from "../../media_style"
 import Flex from "styled-flex-component"
 import { Card } from "react-bootstrap"
 import { Icon } from "semantic-ui-react"
+import posed from "react-pose"
 
 const Header = styled.p`
   ${media.tablet`
@@ -30,7 +31,7 @@ padding-right : 5%
   ${media.phone`
 padding-right : 1%
 padding-left : 1%
-height: 100vh;
+height: 115vh;
 `} 
 padding-left : 20%
 padding-right : 5%
@@ -61,6 +62,33 @@ font-size : 0.7em
   font-size : 1em
 `
 
+const Box = posed.div({
+  hoverable: true,
+  pressable: true,
+  init: {
+    paddingTop: "15px",
+    scale: 1,
+    boxShadow: "0px 0px 0px rgba(0,0,0,0)",
+  },
+  hover: {
+    scale: 1.2,
+    boxShadow: "0px 5px 10px rgba(0,0,0,0.2)",
+  },
+  press: {
+    scale: 1.1,
+    boxShadow: "0px 2px 5px rgba(0,0,0,0.1)",
+  },
+
+  attention: {
+    scale: 1.3,
+    transition: {
+      type: 'spring',
+      stiffness: 200,
+      damping: 0
+    }
+  }
+})
+
 const Github = styled.button`
   background: transparent;
   border-radius: 3px;
@@ -69,7 +97,7 @@ const Github = styled.button`
   margin: 0 1em;
   padding: 0.25em 1em;
   font-size : 1.1em
-  width : 35%
+  width : 35% 
   height : 60px
   margin-left : 10%
   margin-top : 1%
@@ -145,7 +173,7 @@ const Date = styled.p`
         `} 
         `
 
-const Circle = styled.div`
+const Circle = styled(Box)`
         width : 97px
         height: 97px
         padding-top: 5% 
@@ -163,8 +191,7 @@ const Circle = styled.div`
           height: 45px
           padding-top: 14px 
           border-radius: 70px 
-          
-        `} 
+                  `} 
         `
 
 const Image = styled.p`
@@ -206,7 +233,13 @@ export default function update() {
                     {" "}
                     <a href=""> Previous Images </a>{" "}
                   </Image>
-                  <Icon name="arrow alternate circle right outline icon " size="grey" link color="green" style={{ marginLeft : '2%'}} />
+                  <Icon
+                    name="arrow alternate circle right outline icon "
+                    size="grey"
+                    link
+                    color="green"
+                    style={{ marginLeft: "2%" }}
+                  />
                 </Flex>
               </ViewImage>
               <Flex justifyBetween>

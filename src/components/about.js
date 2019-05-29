@@ -4,7 +4,7 @@ import { media } from "../media_style"
 import { Card } from "react-bootstrap"
 
 const Div = styled.div`
-    padding-bottom : 10px 
+  padding-bottom: 10px;
 `
 
 const Text = styled.p`
@@ -18,7 +18,7 @@ const Text = styled.p`
   margin-right : 3.5%
   `}
   ${media.phone`
-    font-size: 0.75em;
+    font-size: 0.8em;
     margin-left : 7%
     margin-right : 7%
   `}
@@ -80,6 +80,7 @@ const Map = styled.button`
 export default function about() {
   return (
     <Div>
+      <br />
       <Text>
         Patfin School Description Patfin School Description Patfin School
         Description Patfin School Description Patfin School Description Patfin
@@ -88,6 +89,7 @@ export default function about() {
         Description Patfin School Description Patfin School Description Patfin
         School Description Patfin School Description
       </Text>
+      <br />
       <Contain>
         <Card style={{ backgroundColor: "#0066f5", borderRadius: "15px" }}>
           <div style={{ marginTop: "3%" }}>
@@ -111,7 +113,6 @@ export default function about() {
           </Button>
         </Card>
       </Contain>
-     
     </Div>
   )
 }
