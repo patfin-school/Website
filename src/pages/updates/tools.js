@@ -23,7 +23,6 @@ const Header = styled.p`
 
 const Div = styled.div`
   ${media.tablet`
-height: 105vh;
 padding-left : 10%
 padding-left : 10%
 padding-right : 5%
@@ -31,13 +30,12 @@ padding-right : 5%
   ${media.phone`
 padding-right : 1%
 padding-left : 1%
-height: 115vh;
 `} 
 padding-left : 20%
+padding-bottom : 5%
 padding-right : 5%
   background-color: #f8f8f9;
   color: black;
-  height: 115vh;
   margin-top: 6%;
 `
 

@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { media } from "../../media_style"
 import { Carousel, Card } from "react-bootstrap"
-import Flex from 'styled-flex-component'
 
 const Header = styled.h3`
   text-align: center;
@@ -14,13 +13,8 @@ const Header = styled.h3`
 const Div = styled.div`
   background-color: #2c3e50;
   width: 100%;
-  height: 155vh;
-  ${media.tablet`
-    height : 120vh
-  `}
-  ${media.phone`
-    height : 110vh
-  `}
+  padding-bottom: 15%
+   
 `
 
 const Text = styled.p`
@@ -118,7 +112,6 @@ const Date = styled.p`
 
 const Slider = styled.div`
 width : 90%
-height : 270px
 margin-top : 5%
 margin-right : 5%
 margin-left : 10%
@@ -134,23 +127,18 @@ margin-left : 7%
 
 const StyledCard = styled(Card)`
   width:  100%  
-  max-width:  90%  
-  height: 115vh  
   margin-right : 25%
+  padding-bottom : 25%
   background-color:  white;
   border-radius:  20px;
   ${media.tablet`
   width:  100%  
-  max-width:  100%  
-  height: 92vh  
   background-color:  white;
   border-radius:  20px;
 `}
   ${media.phone`
   padding-right : 0%
-  max-width:  75%  
   width:  100%  
-  height: 75vh  
   background-color:  white;
   border-radius:  15px;
 `}
@@ -189,7 +177,7 @@ export default class projects extends Component {
             <Github> VIEW BLOG</Github>{" "}
           </Buttons>
           <Slider>
-            <Carousel>
+            <Carousel indicators = {false}>
               <Carousel.Item>
                 <StyledCard>
                   <Card.Img

@@ -27,9 +27,8 @@ export default function footer() {
       <Contain>
         <Text> Patfin School - Lagos , Nigeria , Africa.</Text>
         <Copyright>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          {" "}
+          Copyright © {new Date().getFullYear()}
           <p>All rights reserved.</p>
         </Copyright>
       </Contain>

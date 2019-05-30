@@ -7,6 +7,7 @@ import { media } from '../media_style'
 
 const Div = styled.div`
   margin-top: 2%
+  padding-top: 5%
   margin-left: 35%
   margin-bottom: 2%
   text-align: center 
@@ -19,9 +20,16 @@ const Div = styled.div`
 `
 
 const Text = styled.p`
+${media.phone`
+padding-top: 7%
+`} 
+${media.tablet`
+padding-top: 13%
+`}
 margin-top: 5%
+padding-top: 5%
 text-align: center
-font-size: 1.4em
+font-size: 1.3em
 `
 
 const IconContain = styled.div`
@@ -39,7 +47,7 @@ const IconContain = styled.div`
 export default function connect() {
   return (
     <>
-      <Text> Connect with us </Text> <hr />
+      <Text />  <hr />
       <Div>
         <Flex  >
           <IconContain>
