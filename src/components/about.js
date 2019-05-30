@@ -2,9 +2,9 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { media } from "../media_style"
 import { Card } from "react-bootstrap"
+import Image from "../pages/image"
 
 const Div = styled.div`
-  padding-bottom: 10px;
 `
 
 const Text = styled.p`
@@ -37,9 +37,10 @@ const Contain = styled.div`
   margin-right : 7%
 `
 
-const Title = styled.h5`
+const Title = styled.h3`
   text-align : center
-  font-wieght : bold
+  font-weight : bold
+  padding-top : 3%
   color : white
 `
 
@@ -113,6 +114,8 @@ export default function about() {
           </Button>
         </Card>
       </Contain>
+
+      <Image />
     </Div>
   )
 }

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "patfin-school",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "patfin school website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "NWANI VICTORY",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
