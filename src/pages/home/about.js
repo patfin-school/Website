@@ -1,11 +1,10 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { media } from "../media_style"
+import { media } from "../../media_style"
 import { Card } from "react-bootstrap"
-import Image from "../pages/image"
+// import Image from '../image';
 
-const Div = styled.div`
-`
+const Div = styled.div``
 
 const Text = styled.p`
   font-size: 1.1em;
@@ -114,8 +113,6 @@ export default function about() {
           </Button>
         </Card>
       </Contain>
-
-      <Image />
     </Div>
   )
 }

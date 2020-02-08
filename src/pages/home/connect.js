@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Icon } from "semantic-ui-react"
 import Flex from "styled-flex-component"
 import Link from "gatsby"
-import { media } from '../media_style'
+import { media } from "../../media_style"
 
 const Div = styled.div`
   margin-top: 2%
@@ -20,10 +20,10 @@ const Div = styled.div`
 `
 
 const Text = styled.p`
-${media.phone`
+  ${media.phone`
 padding-top: 7%
-`} 
-${media.tablet`
+`}
+  ${media.tablet`
 padding-top: 13%
 `}
 margin-top: 5%
@@ -47,9 +47,9 @@ const IconContain = styled.div`
 export default function connect() {
   return (
     <>
-      <Text />  <hr />
+      <Text /> <hr />
       <Div>
-        <Flex  >
+        <Flex>
           <IconContain>
             <Icon name="instagram" size="big" link color="green" />
           </IconContain>

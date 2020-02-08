@@ -2,16 +2,14 @@ import React from "react"
 import "semantic-ui-css/semantic.min.css"
 import { Container, Grid } from "semantic-ui-react"
 import styled from "styled-components"
-import { media } from "../media_style"
+import { media } from "../../media_style"
 
 const Div = styled.div`
   ${media.tablet`
 height : 56vh
-`}
-  ${media.phone`
+`} ${media.phone`
   height: 70vh
-`}
-height : 57vh
+`} height : 57vh;
 `
 
 const Contact = () => (
@@ -66,7 +64,7 @@ const Contact = () => (
                 name="email"
               />
             </p>
-              <p>Message</p>
+            <p>Message</p>
             <p>
               <textarea
                 style={{
