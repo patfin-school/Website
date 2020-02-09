@@ -3,7 +3,15 @@ import Flex from "styled-flex-component"
 
 import Layout from "../../components/layout"
 import Banner from "../../components/banner"
-import { Body, Text, Title, Button, Input, Items } from "../../styles/style"
+import {
+  Body,
+  Text,
+  SummaryBody,
+  Title,
+  Button,
+  Input,
+  Items,
+} from "../../styles/style"
 import Features from "../../assets/svg/features.svg"
 
 import Contact from "./contact"
@@ -83,9 +91,11 @@ const Home = () => {
         <div>
           <Activities />
           <Contact />
-          <Blog />
         </div>
       </Body>
+      <SummaryBody>
+        <Blog />
+      </SummaryBody>
     </Layout>
   )
 }

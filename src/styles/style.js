@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import media from "styled-media-query"
+import { Card } from "react-bootstrap"
 
 const Text = styled.p`
-  font-size: 1.4em;
-  text-align: center;
+  font-size: ${props => (props.small ? " 1.15em" : "1.4em")};
+  text-align: ${props => (props.center ? "center" : null)};
+  color: ${props => (props.white ? "#fff" : null)};
 `
 
 const Body = styled.div`
@@ -88,9 +90,9 @@ const Input = styled.input`
 
 const Title = styled.h2`
   text-align: center;
-  font-weight:${props => (props.small ? "lighter" : "bold")};
+  font-weight: ${props => (props.small ? "lighter" : "bold")};
   padding-top: 1%;
-  font-size: ${props => (props.small ? "1.5em" : null)}
+  font-size: ${props => (props.small ? "1.8em" : null)};
   color: ${props => (props.black ? "#0e2f5a" : "white")};
 `
 
@@ -106,14 +108,67 @@ const Items = styled.div({
   marginLeft: "0.5em",
 })
 
+const BlogItems = styled.div({
+  ...autoGrid(250, 70),
+  padding: "1em",
+  marginLeft: "0.5em",
+})
+
+const SummaryBody = styled.div`
+  padding: 1em;
+  background: #f2f5ff;
+`
+
+const StyledCard = styled(Card)`
+  width:  100%
+  margin-right : 25%
+  padding-bottom : 25%
+  background-color:  white;
+  border-radius:  20px;
+  padding : 1em
+`
+
+const Contain = styled.div`
+  h4 {
+    font-weight: bold;
+    color: #0e2f5a;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+`
+
+const FooterBody = styled.footer`
+  background-color: #5919ab;
+  width: 100%;
+`
+
+const FooterSection = styled.div`
+  margin-top: 1em;
+  padding-top: 0.5em;
+  text-align: center;
+  padding: 0.7%;
+  background-color: #361f94;
+  font-size: 0.8em;
+  color: #fff;
+`
+
+const Links = styled.p``
+
 export {
+  Links,
+  FooterSection,
+  FooterBody,
+  Contain,
+  BlogItems,
   Title,
+  StyledCard,
   Items,
   Text,
   Body,
   Input,
   Motto,
   BannerBody,
+  SummaryBody,
   Button,
   HeaderBody,
 }

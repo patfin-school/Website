@@ -1,268 +1,95 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import { Carousel, Card } from "react-bootstrap"
+import React from "react"
+import { Card } from "react-bootstrap"
+import Flex from "styled-flex-component"
+import { FiArrowRight, FiClock, FiEye } from "react-icons/fi"
+import { Link } from "gatsby"
 
-import { Title, Text, Body } from "../../styles/style"
-import { media } from "../../media_style"
+import {
+  Title,
+  Contain,
+  Text,
+  Body,
+  StyledCard,
+  BlogItems,
+} from "../../styles/style"
 import Features from "../../assets/svg/features.svg"
 
-const Header = styled.h3`
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  padding-top: 10px;
-`
+const Data = [
+  {
+    id: 1,
+    title: "Trip To Ibadan",
+    summary:
+      "Welcome back party experience Welcome Welcome back party experience Welcome back party experience ",
+    created: "",
+  },
+  {
+    id: 2,
+    title: "My  Welcome back party experience",
+    created: "",
+    summary:
+      "Welcome back party experience Welcome experience Welcome back party experience Welcome back party experience ",
+  },
+]
 
-const Div = styled.div`
-  background-color: #2c3e50;
-  width: 100%;
-  padding-bottom: 15%;
-`
+const Summary = () => {
+  return (
+    <Body>
+      <Flex justifyCenter>
+        <img src={Features} alt="blog art" style={{ textAlign: "center" }} />
+      </Flex>
+      <Title black> RECENT STORIES </Title>
+      <Text center>
+        All school events and activities pened down for your viewing.
+      </Text>
+      <hr />
+      <BlogItems>
+        {Data.map(({ id, title, summary }) => {
+          return (
+            <StyledCard>
+              <Card.Img
+                variant="top"
+                src={
+                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
+                }
+              />
+              <Title small black>
+                {title}{" "}
+              </Title>
+              <Card.Body>
+                <Text center small>
+                  {summary}
+                </Text>
 
-const Github = styled.button`
-${media.tablet`
-  border-radius: 7px;
-  font-size : 1.1em
-  height : 40px
-`}
-  ${media.phone`
-  border-radius: 7px;
-  font-size : 0.9em
-  height : 50px
-`}
-  background: transparent;
-  border-radius: 7px;
-  border: 1.5px solid palevioletred;
-  color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-  font-size : 1em
-  width : 40%
-  height : 70px
-`
+                <Flex justifyBetween>
+                  <Flex>
+                    <FiClock style={{ fontSize: "1.4em", color: "grey" }} />
+                    <Text>01/01/01</Text>
+                  </Flex>
 
-const Buttons = styled.div`
-  text-align: center;
-`
+                  <Flex>
+                    <FiEye style={{ fontSize: "1.4em", color: "grey" }} />
+                    <Text>11</Text>
+                  </Flex>
+                </Flex>
 
-const Project = styled.button`
-  background: transparent;
-  border-radius: 3px;
-  border: 1.5px solid palevioletred;
-  color: black;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-  font-size : 0.9em
-  width : 50% 
-  height : 60px
-  margin-left : 22%
-  margin-top : 5%
-  ${media.tablet`
-    border-radius: 3px;
-    font-size : 1.1em
-    height : 55px
-  `}
-    ${media.phone`
-    border-radius: 3px;
-    font-size : 1em
-    height : 45px
-  `}
-`
+                <Contain>
+                  <Flex justifyCenter>
+                    <Link to="/">
+                      <Flex>
+                        <h4> Read More</h4>
 
-const Description = styled.p`
-  font-size : 1.1em
-  color: #212529;
-  ${media.tablet`
-  font-size : 1em
-`}
-  ${media.phone`
-  font-size : 0.9em
-`}
-`
-
-const Date = styled.p`
-  font-size : 1.3em
-  margin-top : 15px
-  margin-bottom :15px
-  color: #212529;
-  text-align: right
-  ${media.tablet`
-  font-size : 1.2em
-`}
-  ${media.phone`
-  margin-top : 30px  
-  font-size : 1em
-`}
-`
-
-const Slider = styled.div`
-width : 90%
-margin-top : 5%
-margin-right : 5%
-margin-left : 10%
-${media.tablet`
-padding-top : 3%
-padding-right : 20px 
-`}
-${media.phone`
-margin-top : 5%
-margin-left : 7%
-`}
-`
-
-const StyledCard = styled(Card)`
-  width:  100%  
-  margin-right : 25%
-  padding-bottom : 25%
-  background-color:  white;
-  border-radius:  20px;
-  ${media.tablet`
-  width:  100%  
-  background-color:  white;
-  border-radius:  20px;
-`}
-  ${media.phone`
-  padding-right : 0%
-  width:  100%  
-  background-color:  white;
-  border-radius:  15px;
-`}
-`
-
-export default class projects extends Component {
-  constructor(props, context) {
-    super(props, context)
-
-    this.handleSelect = this.handleSelect.bind(this)
-
-    this.state = {
-      index: 0,
-      direction: null,
-    }
-  }
-
-  handleSelect(selectedIndex, e) {
-    this.setState({
-      index: selectedIndex,
-      direction: e.direction,
-    })
-  }
-
-  render() {
-    return (
-      <div>
-        <Div>
-          <Header> RECENT STORIES </Header> <hr />
-          <Text>
-            {" "}
-            All school events and activities pened down for your viewing.{" "}
-          </Text>
-          <Buttons>
-            {" "}
-            <Github> VIEW BLOG</Github>{" "}
-          </Buttons>
-          <Slider>
-            <Carousel indicators={false}>
-              <Carousel.Item>
-                <StyledCard>
-                  <Card.Img
-                    variant="top"
-                    src={
-                      "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                    }
-                  />
-                  <Title> Our Trip to AIT </Title>
-                  <Card.Body>
-                    <Description>
-                      Details on Excursion Details on Excursion Details on
-                      Excursion Details on Excursion Details on Excursion
-                      Details on Excursion Details on Excursion Details on
-                      Excursion Details on Excursion Details on Excursion
-                    </Description>
-                    <Date>
-                      <b> Date: </b> 01/01/01
-                    </Date>
-                    <Project> Read More </Project>
-                  </Card.Body>
-                </StyledCard>
-                ;
-              </Carousel.Item>
-
-              <Carousel.Item>
-                <StyledCard>
-                  <Card.Img
-                    variant="top"
-                    src={
-                      "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                    }
-                  />
-                  <Title> Our Trip to AIT </Title>
-                  <Card.Body>
-                    <Description>
-                      Details on Excursion Details on Excursion Details on
-                      Excursion Details on Excursion Details on Excursion
-                      Details on Excursion Details on Excursion Details on
-                      Excursion Details on Excursion Details on Excursion
-                    </Description>
-                    <Date>
-                      <b> Date: </b> 01/01/01
-                    </Date>
-                    <Project> Read More </Project>
-                  </Card.Body>
-                </StyledCard>
-              </Carousel.Item>
-
-              <Carousel.Item>
-                <StyledCard>
-                  <Card.Img
-                    variant="top"
-                    src={
-                      "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                    }
-                  />
-                  <Title> Our Trip to AIT </Title>
-                  <Card.Body>
-                    <Description>
-                      Details on Excursion Details on Excursion Details on
-                      Excursion Details on Excursion Details on Excursion
-                      Details on Excursion Details on Excursion Details on
-                      Excursion Details on Excursion Details on Excursion
-                    </Description>
-                    <Date>
-                      <b> Date: </b> 01/01/01
-                    </Date>
-                    <Project> Read More </Project>
-                  </Card.Body>
-                </StyledCard>
-              </Carousel.Item>
-
-              <Carousel.Item>
-                <StyledCard>
-                  <Card.Img
-                    variant="top"
-                    src={
-                      "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-                    }
-                  />
-                  <Title> Our Trip to AIT </Title>
-                  <Card.Body>
-                    <Description>
-                      Details on Excursion Details on Excursion Details on
-                      Excursion Details on Excursion Details on Excursion
-                      Details on Excursion Details on Excursion Details on
-                      Excursion Details on Excursion Details on Excursion
-                    </Description>
-                    <Date>
-                      <b> Date: </b> 01/01/01
-                    </Date>
-                    <Project> Read More </Project>
-                  </Card.Body>
-                </StyledCard>
-              </Carousel.Item>
-            </Carousel>
-          </Slider>
-        </Div>
-      </div>
-    )
-  }
+                        <FiArrowRight style={{ fontSize: "1.7em" }} />
+                      </Flex>
+                    </Link>
+                  </Flex>
+                </Contain>
+              </Card.Body>
+            </StyledCard>
+          )
+        })}
+      </BlogItems>
+    </Body>
+  )
 }
+
+export default Summary

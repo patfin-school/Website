@@ -1,68 +1,21 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
 import Flex from "styled-flex-component"
 import { FiGithub, FiTwitter, FiFacebook } from "react-icons/fi"
-import media from "styled-media-query"
 import { Link } from "gatsby"
 
-const Footer = () => {
-  const Div = {
-    backgroundColor: "#5919AB",
-    width: " 100%",
-  }
+import {
+  Text,
+  FooterBody,
+  FooterSection,
+  Title as Titles,
+} from "../styles/style"
 
+const Footer = () => {
   const Head = {
     fontSize: "0.9em ",
     fontWeight: "bold",
     color: "#fff",
   }
-
-  const Title = {
-    fontSize: "0.8em",
-    color: "#fff",
-  }
-
-  const Testing = styled.div({
-    textAlign: "center",
-    background: "#0e2f5a",
-    padding: "1em",
-    color: "#fff",
-  })
-
-  const Button = styled.button`
-    background: #5919ab;
-    border: 1px solid #0e2f5a;
-    border-radius: 0px 15px 15px 0px  ;
-    color: #fff;
-    height: 7.1vh,
-    margin: 0 1em;
-    padding: 0.50em 1.5em;
-    :hover {
-      border: 2px solid #0e2f5a;
-      font-size: 1em;
-    }
-  `
-
-  const Test = styled.p`
-    font-size: 1.2em;
-    padding-top: 10px;
-    ${media.lessThan("medium")`
-      font-size: 1em
-  `};
-  `
-
-  const Body = styled.div({
-    padding: "1.4em",
-  })
-
-  const Header = styled.h3({
-    textAlign: "center",
-  })
-
-  const Text = styled.p({
-    padding: "0.5em",
-    textAlign: "center",
-  })
 
   const [Width, setWidth] = useState(null)
 
@@ -80,100 +33,121 @@ const Footer = () => {
   }, [])
 
   return (
-    <div>
-      <footer style={Div}>
-        {Width >= 500 ? (
-          <div style={{ padding: "2%" }}>
-            <Flex justifyAround>
-              <div>
-                <h5 style={{ marginTop: "1em", color: "#fff" }}>Event.Inc</h5>
-
-                <Flex justifyAround>
-                  <FiFacebook style={{ color: "black", fontSize: "1.5em" }} />
-                  <FiTwitter style={{ color: "blue", fontSize: "1.5em" }} />
-                  <FiGithub style={{ color: "black", fontSize: "1.5em" }} />
-                </Flex>
-              </div>
-              <Flex column>
-                <p style={Head}> PRODUCT </p>
-                <p style={Title}> Create Team </p>
-                <p style={Title}> Documentation </p>
-                <p style={Title}> Billing </p>
+    <FooterBody>
+      {Width >= 500 ? (
+        <div style={{ padding: "2%" }}>
+          <Flex justifyAround>
+            <div>
+              <Titles small>Patfin School</Titles>
+              <Flex justifyAround>
+                <FiFacebook style={{ color: "black", fontSize: "1.5em" }} />
+                <FiTwitter style={{ color: "blue", fontSize: "1.5em" }} />
+                <FiGithub style={{ color: "black", fontSize: "1.5em" }} />
               </Flex>
-              <Flex column>
-                <p style={Head}> HELP </p>
-                <p style={Title}> Integrations </p>
-                <p style={Title}> Guides </p>
-                <p style={Title}> About Us </p>
-              </Flex>
-
-              <Flex column>
-                <p style={Head}> MORE </p>
-                <p style={Title}> Social </p>
-                <p style={Title}> Careers </p>
-                <p style={Title}> Legal terms </p>
-              </Flex>
+            </div>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team{" "}
+              </Text>
+              <Text small white>
+                Documentation{" "}
+              </Text>
+              <Text small white>
+                Billing{" "}
+              </Text>
+            </Flex>{" "}
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team{" "}
+              </Text>
+              <Text small white>
+                Documentation{" "}
+              </Text>
+              <Text small white>
+                Billing{" "}
+              </Text>
             </Flex>
-          </div>
-        ) : (
-          <div style={{ padding: "0.5%" }}>
-            <Flex justifyCenter>
-              <div>
-                <h5 style={{ marginTop: "1em", color: "#fff" }}>Event.Inc</h5>
-
-                <Flex justifyAround>
-                  <FiFacebook style={{ color: "black", fontSize: "1.5em" }} />
-                  <FiTwitter style={{ color: "blue", fontSize: "1.5em" }} />
-                  <FiGithub style={{ color: "black", fontSize: "1.5em" }} />
-                </Flex>
-              </div>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team{" "}
+              </Text>
+              <Text small white>
+                Documentation{" "}
+              </Text>
+              <Text small white>
+                Billing{" "}
+              </Text>
             </Flex>
-
-            <br />
-            <Flex justifyAround>
-              <Flex column>
-                <p style={Head}> PRODUCT </p>
-                <p style={Title}> Create Team </p>
-                <p style={Title}> Documentation </p>
-                <p style={Title}> Billing </p>
-              </Flex>
-              <Flex column>
-                <p style={Head}> HELP </p>
-                <p style={Title}> Integrations </p>
-                <p style={Title}> Guides </p>
-                <p style={Title}> About Us </p>
-              </Flex>
-
-              <Flex column>
-                <p style={Head}> MORE </p>
-                <p style={Title}> Social </p>
-                <p style={Title}> Careers </p>
-                <p style={Title}> Legal terms </p>
-              </Flex>
-            </Flex>
-          </div>
-        )}
-
-        <div
-          style={{
-            marginTop: "1em",
-            paddingTop: "0.5em",
-            textAlign: "center",
-            padding: "0.7%",
-            backgroundColor: " #361f94",
-            fontSize: "0.8em",
-            color: "#fff",
-          }}
-        >
-          <p>
-            Copyright © {new Date().getFullYear()} , a subsidiary of the
-            <a href="https://www.fundry.netlify.com"> Fundry Program </a>.
-            <br /> <a href="/"> Terms of Service </a> or
-            <a href="/"> Privacy Policies </a>
-          </p>
+          </Flex>
         </div>
-      </footer>
-    </div>
+      ) : (
+        <div style={{ padding: "0.5%" }}>
+          <Flex justifyCenter>
+            <div>
+              <h5 style={{ marginTop: "1em", color: "#fff" }}>Event.Inc</h5>
+
+              <Flex justifyAround>
+                <FiFacebook style={{ color: "black", fontSize: "1.5em" }} />
+                <FiTwitter style={{ color: "blue", fontSize: "1.5em" }} />
+                <FiGithub style={{ color: "black", fontSize: "1.5em" }} />
+              </Flex>
+            </div>
+          </Flex>
+
+          <br />
+          <Flex justifyAround>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team{" "}
+              </Text>
+              <Text small white>
+                Documentation{" "}
+              </Text>
+              <Text small white>
+                Billing{" "}
+              </Text>
+            </Flex>{" "}
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team{" "}
+              </Text>
+              <Text small white>
+                Documentation{" "}
+              </Text>
+              <Text small white>
+                Billing{" "}
+              </Text>
+            </Flex>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team{" "}
+              </Text>
+              <Text small white>
+                Documentation{" "}
+              </Text>
+              <Text small white>
+                Billing{" "}
+              </Text>
+            </Flex>
+          </Flex>
+        </div>
+      )}
+
+      <FooterSection>
+        <Text small>
+          Copyright © {new Date().getFullYear()} , a subsidiary of the
+          <a href="https://www.fundry.netlify.com"> Fundry Program </a>.
+          <br /> <a href="/"> Terms of Service </a> or
+          <a href="/"> Privacy Policies </a>
+        </Text>
+      </FooterSection>
+    </FooterBody>
   )
 }
 
