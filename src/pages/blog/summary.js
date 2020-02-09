@@ -46,7 +46,7 @@ const Summary = () => {
       <BlogItems>
         {Data.map(({ id, title, summary }) => {
           return (
-            <StyledCard key={id}>
+            <StyledCard unpadded key={id}>
               <Card.Img
                 fluid
                 variant="top"
@@ -61,29 +61,29 @@ const Summary = () => {
                 {summary}
               </Text>
 
-              <Flex justifyBetween>
-                <Flex>
-                  <Hover style={{ paddingRight: "7px" }}>
-                    <FiClock style={{ fontSize: "1.7em", color: "grey" }} />
-                  </Hover>
-                  <Text>01/01/01</Text>
-                </Flex>
-
-                <Flex>
-                  <Hover style={{ paddingRight: "7px" }}>
-                    <FiEye style={{ fontSize: "1.7em", color: "grey" }} />
-                  </Hover>
-                  <Text>11</Text>
-                </Flex>
-              </Flex>
-
               <Contain>
+                <Flex justifyBetween>
+                  <Flex>
+                    <Hover style={{ paddingRight: "7px" }}>
+                      <FiClock style={{ fontSize: "1.7em", color: "grey" }} />
+                    </Hover>
+                    <Text>01/01/01</Text>
+                  </Flex>
+
+                  <Flex>
+                    <Hover style={{ paddingRight: "7px" }}>
+                      <FiEye style={{ fontSize: "1.7em", color: "grey" }} />
+                    </Hover>
+                    <Text>11</Text>
+                  </Flex>
+                </Flex>
+
                 <Flex justifyCenter>
                   <Link to="/">
                     <Flex>
-                      <h4> Read More</h4>
+                      <h5> Read More</h5>
 
-                      <FiArrowRight style={{ fontSize: "2em" }} />
+                      <FiArrowRight style={{ fontSize: "1.7em" }} />
                     </Flex>
                   </Link>
                 </Flex>

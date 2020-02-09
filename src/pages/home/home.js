@@ -102,7 +102,10 @@ const Home = () => {
               </div>
             ) : (
               <div>
-                <Title black> Newsletter List. </Title>
+                <Title black small>
+                  {" "}
+                  Newsletter List.{" "}
+                </Title>
                 <Flex justifyCenter>
                   <Input placeholder="Enter Email Address" type="text" />{" "}
                 </Flex>

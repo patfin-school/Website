@@ -60,10 +60,10 @@ const Motto = styled.h1`
   font-size: 3em;
   font-weight: bold;
   ${media.lessThan("medium")`
-  font-size: 2.5em;
+  font-size: 2.3em;
   `};
   ${media.lessThan("small")`
-  font-size:2em;
+  font-size:1.8em;
   `};
 `
 
@@ -72,6 +72,12 @@ const BannerBody = styled.div`
   text-align: center;
   background: #f2f5ff;
   color: #0e2f5a;
+  ${media.lessThan("medium")`
+  padding: 1.5em;
+  `};
+  ${media.lessThan("small")`
+  padding: 1em;
+  `};
 `
 
 const HeaderBody = styled.nav`
@@ -107,6 +113,7 @@ const Input = styled.input`
   border: 1px solid #0e2f5a;
   ${media.lessThan("medium")`
   font-size: 1.1em;
+  padding: 0.7em 4em;
   width : 28em;
   `};
   ${media.lessThan("small")`
@@ -158,7 +165,7 @@ const StyledCard = styled.div`
   padding-bottom: 10px;
   background-color: white;
   border-radius: 10px;
-  padding: 1.3em;
+  padding: ${props => (props.unpadded ? null : "1.3em")};
   h6 {
     font-size: 1.2em;
     font-weight: bold;
@@ -168,7 +175,8 @@ const StyledCard = styled.div`
 
 const Contain = styled.div`
   padding-top: 15px;
-  h4 {
+  padding: 1em;
+  h5 {
     font-weight: bold;
     color: #0e2f5a;
     margin-right: 10px;
