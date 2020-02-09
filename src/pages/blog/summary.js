@@ -8,11 +8,12 @@ import {
   Title,
   Contain,
   Text,
+  Hover,
   Body,
   StyledCard,
   BlogItems,
 } from "../../styles/style"
-import Features from "../../assets/svg/features.svg"
+import Reader from "../../assets/svg/reader.svg"
 
 const Data = [
   {
@@ -35,7 +36,7 @@ const Summary = () => {
   return (
     <Body>
       <Flex justifyCenter>
-        <img src={Features} alt="blog art" style={{ textAlign: "center" }} />
+        <img src={Reader} alt="blog art" style={{ textAlign: "center" }} />
       </Flex>
       <Title black> RECENT STORIES </Title>
       <Text center>
@@ -45,45 +46,48 @@ const Summary = () => {
       <BlogItems>
         {Data.map(({ id, title, summary }) => {
           return (
-            <StyledCard>
+            <StyledCard key={id}>
               <Card.Img
+                fluid
                 variant="top"
                 src={
                   "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
                 }
               />
               <Title small black>
-                {title}{" "}
+                {title}
               </Title>
-              <Card.Body>
-                <Text center small>
-                  {summary}
-                </Text>
+              <Text center small>
+                {summary}
+              </Text>
 
-                <Flex justifyBetween>
-                  <Flex>
-                    <FiClock style={{ fontSize: "1.4em", color: "grey" }} />
-                    <Text>01/01/01</Text>
-                  </Flex>
-
-                  <Flex>
-                    <FiEye style={{ fontSize: "1.4em", color: "grey" }} />
-                    <Text>11</Text>
-                  </Flex>
+              <Flex justifyBetween>
+                <Flex>
+                  <Hover style={{ paddingRight: "7px" }}>
+                    <FiClock style={{ fontSize: "1.7em", color: "grey" }} />
+                  </Hover>
+                  <Text>01/01/01</Text>
                 </Flex>
 
-                <Contain>
-                  <Flex justifyCenter>
-                    <Link to="/">
-                      <Flex>
-                        <h4> Read More</h4>
+                <Flex>
+                  <Hover style={{ paddingRight: "7px" }}>
+                    <FiEye style={{ fontSize: "1.7em", color: "grey" }} />
+                  </Hover>
+                  <Text>11</Text>
+                </Flex>
+              </Flex>
 
-                        <FiArrowRight style={{ fontSize: "1.7em" }} />
-                      </Flex>
-                    </Link>
-                  </Flex>
-                </Contain>
-              </Card.Body>
+              <Contain>
+                <Flex justifyCenter>
+                  <Link to="/">
+                    <Flex>
+                      <h4> Read More</h4>
+
+                      <FiArrowRight style={{ fontSize: "2em" }} />
+                    </Flex>
+                  </Link>
+                </Flex>
+              </Contain>
             </StyledCard>
           )
         })}

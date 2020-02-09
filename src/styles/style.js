@@ -1,11 +1,16 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import { Card } from "react-bootstrap"
 
 const Text = styled.p`
   font-size: ${props => (props.small ? " 1.15em" : "1.4em")};
   text-align: ${props => (props.center ? "center" : null)};
   color: ${props => (props.white ? "#fff" : null)};
+  ${media.lessThan("medium")`
+  font-size: ${props => (props.small ? " 1.15em" : "1.3em")};
+  `};
+  ${media.lessThan("small")`
+  font-size: ${props => (props.small ? " 1.15em" : "1.2em")};
+  `};
 `
 
 const Body = styled.div`
@@ -45,13 +50,21 @@ const Button = styled.button`
   }
   ${media.lessThan("medium")`
       margin: 0 0.25em;
-      padding: 0.25em 1.2em;
-      height: 30px;
+      padding: 0.50em 2em;
+      height: 45px;
+      font-size: 1.1em;
   `};
 `
 
 const Motto = styled.h1`
   font-size: 3em;
+  font-weight: bold;
+  ${media.lessThan("medium")`
+  font-size: 2.5em;
+  `};
+  ${media.lessThan("small")`
+  font-size:2em;
+  `};
 `
 
 const BannerBody = styled.div`
@@ -67,9 +80,15 @@ const HeaderBody = styled.nav`
   box-shadow: 0px 3px 4px grey;
   h2 {
     font-size: 1.8em;
-    color: #0e2f5a;
     font-weight: bold;
     margin-left: 20px;
+    color: #0e2f5a;
+  }
+  h3 {
+    color: #0e2f5a;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 10px;
   }
   a {
     margin: 0.3em;
@@ -86,6 +105,14 @@ const Input = styled.input`
   padding-left: 15px;
   font-size: 1.1em;
   border: 1px solid #0e2f5a;
+  ${media.lessThan("medium")`
+  font-size: 1.1em;
+  width : 28em;
+  `};
+  ${media.lessThan("small")`
+  font-size: 1em;
+  width : 27em;
+  `};
 `
 
 const Title = styled.h2`
@@ -94,6 +121,12 @@ const Title = styled.h2`
   padding-top: 1%;
   font-size: ${props => (props.small ? "1.8em" : null)};
   color: ${props => (props.black ? "#0e2f5a" : "white")};
+  ${media.lessThan("medium")`
+  font-size: ${props => (props.small ? "1.5em" : null)};
+  `};
+  ${media.lessThan("small")`
+  font-size: ${props => (props.small ? "1.4em" : null)};
+  `};
 `
 
 const autoGrid = (minColumnWidth = 200, gridGap = 0) => ({
@@ -119,21 +152,26 @@ const SummaryBody = styled.div`
   background: #f2f5ff;
 `
 
-const StyledCard = styled(Card)`
-  width:  100%
-  margin-right : 25%
-  padding-bottom : 25%
-  background-color:  white;
-  border-radius:  20px;
-  padding : 1em
+const StyledCard = styled.div`
+  width: 100%;
+  box-shadow: 0px 4px 5px grey;
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.3em;
+  h6 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0e2f5a;
+  }
 `
 
 const Contain = styled.div`
+  padding-top: 15px;
   h4 {
     font-weight: bold;
     color: #0e2f5a;
     margin-right: 10px;
-    margin-bottom: 5px;
   }
 `
 
@@ -152,11 +190,21 @@ const FooterSection = styled.div`
   color: #fff;
 `
 
+const Hover = styled.div``
+
+const ActivitiesItems = styled.div({
+  ...autoGrid(250, 70),
+  padding: "0.5em",
+  marginLeft: "0.5em",
+})
+
 const Links = styled.p``
 
 export {
+  ActivitiesItems,
   Links,
   FooterSection,
+  Hover,
   FooterBody,
   Contain,
   BlogItems,

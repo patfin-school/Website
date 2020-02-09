@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Flex from "styled-flex-component"
-import { FiGithub, FiTwitter, FiFacebook } from "react-icons/fi"
+import { FiMail, FiTwitter, FiFacebook } from "react-icons/fi"
 import { Link } from "gatsby"
 
 import {
@@ -35,50 +35,50 @@ const Footer = () => {
   return (
     <FooterBody>
       {Width >= 500 ? (
-        <div style={{ padding: "2%" }}>
+        <div style={{ padding: "2% 1%" }}>
           <Flex justifyAround>
             <div>
               <Titles small>Patfin School</Titles>
               <Flex justifyAround>
-                <FiFacebook style={{ color: "black", fontSize: "1.5em" }} />
-                <FiTwitter style={{ color: "blue", fontSize: "1.5em" }} />
-                <FiGithub style={{ color: "black", fontSize: "1.5em" }} />
+                <FiFacebook style={{ color: "blue", fontSize: "2.5em" }} />
+                <FiTwitter style={{ color: "blue", fontSize: "2.5em" }} />
+                <FiMail style={{ color: "red", fontSize: "2.5em" }} />
               </Flex>
             </div>
             <Flex column>
               <p style={Head}> PRODUCT </p>
               <Text small white>
-                Create Team{" "}
+                Create Team
               </Text>
               <Text small white>
-                Documentation{" "}
+                Documentation
               </Text>
               <Text small white>
-                Billing{" "}
-              </Text>
-            </Flex>{" "}
-            <Flex column>
-              <p style={Head}> PRODUCT </p>
-              <Text small white>
-                Create Team{" "}
-              </Text>
-              <Text small white>
-                Documentation{" "}
-              </Text>
-              <Text small white>
-                Billing{" "}
+                Billing
               </Text>
             </Flex>
             <Flex column>
               <p style={Head}> PRODUCT </p>
               <Text small white>
-                Create Team{" "}
+                Create Team
               </Text>
               <Text small white>
-                Documentation{" "}
+                Documentation
               </Text>
               <Text small white>
-                Billing{" "}
+                Billing
+              </Text>
+            </Flex>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team
+              </Text>
+              <Text small white>
+                Documentation
+              </Text>
+              <Text small white>
+                Billing
               </Text>
             </Flex>
           </Flex>
@@ -87,12 +87,12 @@ const Footer = () => {
         <div style={{ padding: "0.5%" }}>
           <Flex justifyCenter>
             <div>
-              <h5 style={{ marginTop: "1em", color: "#fff" }}>Event.Inc</h5>
+              <h5 style={{ marginTop: "1em", color: "#fff" }}>Patfin School</h5>
 
               <Flex justifyAround>
-                <FiFacebook style={{ color: "black", fontSize: "1.5em" }} />
-                <FiTwitter style={{ color: "blue", fontSize: "1.5em" }} />
-                <FiGithub style={{ color: "black", fontSize: "1.5em" }} />
+                <FiFacebook style={{ color: "black", fontSize: "1.7em" }} />
+                <FiTwitter style={{ color: "blue", fontSize: "1.7em" }} />
+                <FiMail style={{ color: "black", fontSize: "1.7em" }} />
               </Flex>
             </div>
           </Flex>
@@ -102,37 +102,37 @@ const Footer = () => {
             <Flex column>
               <p style={Head}> PRODUCT </p>
               <Text small white>
-                Create Team{" "}
+                Create Team
               </Text>
               <Text small white>
-                Documentation{" "}
+                Documentation
               </Text>
               <Text small white>
-                Billing{" "}
-              </Text>
-            </Flex>{" "}
-            <Flex column>
-              <p style={Head}> PRODUCT </p>
-              <Text small white>
-                Create Team{" "}
-              </Text>
-              <Text small white>
-                Documentation{" "}
-              </Text>
-              <Text small white>
-                Billing{" "}
+                Billing
               </Text>
             </Flex>
             <Flex column>
               <p style={Head}> PRODUCT </p>
               <Text small white>
-                Create Team{" "}
+                Create Team
               </Text>
               <Text small white>
-                Documentation{" "}
+                Documentation
               </Text>
               <Text small white>
-                Billing{" "}
+                Billing
+              </Text>
+            </Flex>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team
+              </Text>
+              <Text small white>
+                Documentation
+              </Text>
+              <Text small white>
+                Billing
               </Text>
             </Flex>
           </Flex>
