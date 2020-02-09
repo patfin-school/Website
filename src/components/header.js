@@ -3,72 +3,14 @@ import React, { useState, useEffect } from "react"
 import Img from "react-image"
 import styled from "styled-components"
 import Flex from "styled-flex-component"
-import media from "styled-media-query"
 import { FiMenu } from "react-icons/fi"
 
+import { HeaderBody, Button } from "../styles/style"
+
 const Header = props => {
-  // console.log(auth, 'auth from header');
-  const Div = {
-    padding: "0.7em",
-    paddingTop: "1em",
-    backgroundColor: props.style == "download" ? "#f2f5ff" : "transparent",
-  }
-
-  const Head = {
-    paddingTop: "1em",
-    backgroundColor: "transparent",
-    Color: "#0b33a2",
-  }
-
-  const Brand = styled.p`
-    color: #ff21c1;
-    text-decoration#: none;
-    font-size: 25px;
-    font-family: comic sans ms;
-    font-weight: bold;
-    ${media.lessThan("medium")`
-      font-size: 20px
-  `};
-  `
-
-  const Title = styled.a`
-    font-size: 17px;
-    color: #fff;
-    ${media.lessThan("medium")`
-    font-size: 15px
-    padding-top : 10px
-  `};
-  `
-
   const Image = styled(Img)`
     width: 7%;
     height: 25px;
-  `
-
-  const Button = styled.button`
-    background: "#401364";
-    text-align: right;
-    border-radius: 5px;
-    height: 40px;
-    border: 1px solid #0e2f5a;
-    color: #fff;
-    margin: 0 1em;
-    padding: 0.5em 1.5em;
-    font-size: 1em;
-    &:hover {
-      color: #401364;
-      background: transparent;
-      border: 1px solid #ff21c1;
-    }
-    ${media.lessThan("medium")`
-      margin: 0 0.25em;
-      padding: 0.25em 1.2em;
-      height: 30px;
-  `};
-  `
-
-  const NameDiv = styled.div`
-    margin-left: 2%;
   `
 
   const [Width, setWidth] = useState(null)
@@ -90,118 +32,59 @@ const Header = props => {
   return (
     <div>
       {Width >= 600 ? (
-        <div>
-          {props.style == false ? (
-            <div style={Head}>
-              <nav>
-                <Flex justifyBetween>
-                  <NameDiv>
-                    <Flex>
-                      <Image
-                        src={
-                          "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
-                        }
-                      />
-                      <Link to="/">
-                        <Brand>Event</Brand>
-                      </Link>
-                    </Flex>
-                  </NameDiv>
-                  <Flex>
-                    <div style={{ paddingRight: "20px" }}>
-                      <Link to="/">
-                        <Title> Resources </Title>
-                      </Link>
-                    </div>
-                  </Flex>
-                </Flex>
-              </nav>
-            </div>
-          ) : (
-            <div style={Div}>
-              <nav>
-                <Flex justifyBetween>
-                  <NameDiv>
-                    <Flex>
-                      <Image
-                        src={
-                          "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
-                        }
-                      />
-                      <Link to="/">
-                        <Brand>Event</Brand>
-                      </Link>
-                    </Flex>
-                  </NameDiv>
-                  <Flex>
-                    <div style={{ paddingRight: "30px" }}>
-                      <Link to="/">
-                        <Title> Resources </Title>
-                      </Link>
-                    </div>
-                    <div style={{ paddingRight: "20px" }}>
-                      <Link to="user/login">
-                        <Title> Logout </Title>
-                      </Link>
-                    </div>
-                  </Flex>
-                </Flex>
-              </nav>
-            </div>
-          )}{" "}
-        </div>
-      ) : (
-        // {/* MOBILE RESPONSIVENESS   */}
-        <div>
-          {props.style == false ? (
-            <div style={Head}>
-              <nav>
-                <Flex justifyBetween>
-                  <NameDiv>
-                    <Flex>
-                      <Image
-                        src={
-                          "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
-                        }
-                      />
-                      <Link to="/">
-                        <Brand>Remotify</Brand>
-                      </Link>
-                    </Flex>
-                  </NameDiv>
-
-                  <Link to="/download/download">
-                    <Button> Download </Button>
+        <HeaderBody>
+          <nav>
+            <Flex justifyBetween>
+              <Flex>
+                <Image
+                  src={
+                    "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
+                  }
+                />
+                <Link to="/">
+                  <h2>Patfin</h2>
+                </Link>
+              </Flex>
+              <Flex>
+                <div style={{ paddingRight: "20px" }}>
+                  <Link to="/">
+                    <a> Activities</a>
                   </Link>
-                </Flex>
-              </nav>
-            </div>
-          ) : (
-            <div style={Div}>
-              <nav>
-                <Flex justifyBetween>
-                  <NameDiv>
-                    <Flex>
-                      <Image
-                        src={
-                          "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
-                        }
-                      />
-                      <Link to="/">
-                        <Brand>Event</Brand>
-                      </Link>
-                    </Flex>
-                  </NameDiv>
 
-                  <FiMenu style={{ fontSize: "2em" }} />
-                </Flex>
-              </nav>
-            </div>
-          )}
-        </div>
+                  <Link to="/">
+                    <a> Calendar </a>
+                  </Link>
+
+                  <Link to="/">
+                    <a> Resources </a>
+                  </Link>
+                </div>
+              </Flex>
+            </Flex>
+          </nav>
+        </HeaderBody>
+      ) : (
+        <HeaderBody>
+          <nav>
+            <Flex justifyBetween>
+              <Flex>
+                <Image
+                  src={
+                    "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
+                  }
+                />
+                <Link to="/">
+                  <h2>Remotify</h2>
+                </Link>
+              </Flex>
+
+              <Link to="/download/download">
+                <Button> Download </Button>
+              </Link>
+            </Flex>
+          </nav>
+        </HeaderBody>
       )}
-
-      <hr />
     </div>
   )
 }

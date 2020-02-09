@@ -13,19 +13,15 @@ const Header = styled.h3`
 const Div = styled.div`
   background-color: #2c3e50;
   width: 100%;
-  padding-bottom: 15%
-   
+  padding-bottom: 15%;
 `
 
 const Text = styled.p`
   ${media.tablet`
 font-size : 1.2em
-`}
-  ${media.phone`
+`} ${media.phone`
 font-size : 1em
-`}
-font-size : 1.5em
-text-align: center;
+`} font-size : 1.5em text-align: center;
   color: white;
 `
 
@@ -177,7 +173,7 @@ export default class projects extends Component {
             <Github> VIEW BLOG</Github>{" "}
           </Buttons>
           <Slider>
-            <Carousel indicators = {false}>
+            <Carousel indicators={false}>
               <Carousel.Item>
                 <StyledCard>
                   <Card.Img

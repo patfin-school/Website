@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Icon } from "semantic-ui-react"
 import Flex from "styled-flex-component"
 import Link from "gatsby"
-import { media } from "../../media_style"
+import { media } from "../media_style"
 
 const Div = styled.div`
   margin-top: 2%

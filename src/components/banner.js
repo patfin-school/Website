@@ -1,9 +1,17 @@
 import React from "react"
 
+import { Body, BannerBody, Motto, Button } from "../styles/style"
+import Art from "../assets/svg/banner-art.svg"
+
 export default function banner() {
   return (
-    <div>
-      <h2> BANNER HERE </h2>
-    </div>
+    <BannerBody>
+      <Body>
+        <img alt="illustration" src={Art} style={{ maxHeight: "25em" }} />
+
+        <Motto> Raising Future Leaders </Motto>
+        <Button> Our Activities </Button>
+      </Body>
+    </BannerBody>
   )
 }

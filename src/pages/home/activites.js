@@ -10,14 +10,10 @@ const Header = styled.p`
   ${media.tablet`
   padding-top: 15px;
   font-size : 1.4em
-  `}
-
-  ${media.phone`
+  `} ${media.phone`
   padding-top: 10px;
   font-size : 1.3em
-  `} 
-  font-size : 1.5em
-  padding-top: 30px;
+  `} font-size : 1.5em padding-top: 30px;
   text-align: center;
 `
 
@@ -26,15 +22,10 @@ const Div = styled.div`
 padding-left : 10%
 padding-left : 10%
 padding-right : 5%
-`}
-  ${media.phone`
+`} ${media.phone`
 padding-right : 1%
 padding-left : 1%
-`} 
-padding-left : 20%
-padding-bottom : 5%
-padding-right : 5%
-  background-color: #f8f8f9;
+`} padding-left : 20% padding-bottom : 5% padding-right : 5% background-color: #f8f8f9;
   color: black;
   margin-top: 6%;
 `
@@ -42,22 +33,17 @@ padding-right : 5%
 const Title = styled.p`
   ${media.tablet`
 font-size : 1.2em
-`}
-  ${media.phone`
+`} ${media.phone`
 font-size : 1.1em
-`} 
-font-size : 1.4em
-text-align: center;
+`} font-size : 1.4em text-align: center;
 `
 
 const Text = styled.p`
   ${media.tablet`
 font-size : 0.9em
-`}
-  ${media.phone`
+`} ${media.phone`
 font-size : 0.7em
-`}
-  font-size : 1em
+`} font-size : 1em;
 `
 
 const Box = posed.div({
@@ -80,11 +66,11 @@ const Box = posed.div({
   attention: {
     scale: 1.3,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 200,
-      damping: 0
-    }
-  }
+      damping: 0,
+    },
+  },
 })
 
 const Github = styled.button`
@@ -152,11 +138,10 @@ const Details = styled.div`
   margin-bottom: 5%;
   ${media.tablet`
     margin-left: 2%;
-  `}
-  ${media.phone`
+  `} ${media.phone`
   margin-bottom: 3%;
   margin-left: 3%;
-  `}
+  `};
 `
 
 const Date = styled.p`
