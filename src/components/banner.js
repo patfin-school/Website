@@ -9,7 +9,9 @@ export default function banner() {
       <Body>
         <img alt="illustration" src={Art} style={{ maxHeight: "25em" }} />
 
-        <Motto> Raising Future Leaders </Motto>
+        <Motto>
+          Raising Future Leaders <br /> Of Tomorrow
+        </Motto>
         <Button> Our Activities </Button>
       </Body>
     </BannerBody>

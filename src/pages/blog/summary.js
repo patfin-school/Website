@@ -1,7 +1,10 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { media } from "../../media_style"
 import { Carousel, Card } from "react-bootstrap"
+
+import { Title, Text, Body } from "../../styles/style"
+import { media } from "../../media_style"
+import Features from "../../assets/svg/features.svg"
 
 const Header = styled.h3`
   text-align: center;
@@ -14,20 +17,6 @@ const Div = styled.div`
   background-color: #2c3e50;
   width: 100%;
   padding-bottom: 15%;
-`
-
-const Text = styled.p`
-  ${media.tablet`
-font-size : 1.2em
-`} ${media.phone`
-font-size : 1em
-`} font-size : 1.5em text-align: center;
-  color: white;
-`
-
-const Title = styled.h5`
-  text-align: center;
-  font-weight: bold;
 `
 
 const Github = styled.button`
