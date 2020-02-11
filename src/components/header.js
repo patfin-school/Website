@@ -39,17 +39,17 @@ const Header = props => {
               </Link>
             </Flex>
             <Flex>
-              <div style={{ paddingRight: "20px" }}>
-                <Link to="/">
-                  <a> Activities</a>
+              <div style={{ paddingRight: "10px", paddingTop: "15px" }}>
+                <Link to="/blog/blog">
+                  <a> Blog</a>
                 </Link>
 
                 <Link to="/">
-                  <a> Calendar </a>
+                  <a> Activities </a>
                 </Link>
 
                 <Link to="/">
-                  <a> Resources </a>
+                  <a> Academics</a>
                 </Link>
               </div>
             </Flex>

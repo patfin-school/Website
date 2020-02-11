@@ -34,7 +34,7 @@ const Footer = () => {
 
   return (
     <FooterBody>
-      {Width >= 500 ? (
+      {Width >= 700 ? (
         <div style={{ padding: "2% 1%" }}>
           <Flex justifyAround>
             <div>
@@ -87,12 +87,14 @@ const Footer = () => {
         <div style={{ padding: "0.5%" }}>
           <Flex justifyCenter>
             <div>
-              <h5 style={{ marginTop: "1em", color: "#fff" }}>Patfin School</h5>
+              <br />
+
+              <Titles small>Patfin School</Titles>
 
               <Flex justifyAround>
-                <FiFacebook style={{ color: "black", fontSize: "1.7em" }} />
-                <FiTwitter style={{ color: "blue", fontSize: "1.7em" }} />
-                <FiMail style={{ color: "black", fontSize: "1.7em" }} />
+                <FiFacebook style={{ color: "black", fontSize: "2em" }} />
+                <FiTwitter style={{ color: "blue", fontSize: "2em" }} />
+                <FiMail style={{ color: "black", fontSize: "2em" }} />
               </Flex>
             </div>
           </Flex>
@@ -102,6 +104,18 @@ const Footer = () => {
             <Flex column>
               <p style={Head}> PRODUCT </p>
               <Text small white>
+                Jobs
+              </Text>
+              <Text small white>
+                Documentation
+              </Text>
+              <Text small white>
+                Billing
+              </Text>
+            </Flex>
+            <Flex column>
+              <p style={Head}> HELP </p>
+              <Text small white>
                 Create Team
               </Text>
               <Text small white>
@@ -112,27 +126,12 @@ const Footer = () => {
               </Text>
             </Flex>
             <Flex column>
-              <p style={Head}> PRODUCT </p>
+              <p style={Head}> MORE </p>
               <Text small white>
-                Create Team
+                Admissions
               </Text>
               <Text small white>
-                Documentation
-              </Text>
-              <Text small white>
-                Billing
-              </Text>
-            </Flex>
-            <Flex column>
-              <p style={Head}> PRODUCT </p>
-              <Text small white>
-                Create Team
-              </Text>
-              <Text small white>
-                Documentation
-              </Text>
-              <Text small white>
-                Billing
+                Scheme
               </Text>
             </Flex>
           </Flex>
