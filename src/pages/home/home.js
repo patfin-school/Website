@@ -85,7 +85,9 @@ const Home = () => {
                   <Title black small bold>
                     {name}{" "}
                   </Title>
-                  <Text center> {text} </Text>
+                  <Text center small>
+                    {text}{" "}
+                  </Text>
                 </div>
               )
             })}
