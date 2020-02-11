@@ -11,12 +11,16 @@ const Data = [
   {
     id: 1,
     title: "Trip To Ibadan",
+    imgUri:
+      "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg",
     summary:
       "Welcome back party experience Welcome Welcome back party experience Welcome back party experience ",
     created: "",
   },
   {
     id: 2,
+    imgUri:
+      "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg",
     title: "My  Welcome back party experience",
     created: "",
     summary:
@@ -36,10 +40,10 @@ const Summary = () => {
       </Text>
       <hr />
       <BlogItems>
-        {Data.map(({ id, title, summary }) => {
+        {Data.map(({ id, title, summary, imgUri }) => {
           return (
             <BlogItems>
-              <StoryCard id={id} title={title} summary={summary} />
+              <StoryCard id={id} title={title} summary={summary} img={imgUri} />
             </BlogItems>
           )
         })}

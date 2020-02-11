@@ -9,13 +9,7 @@ import { Title, Contain, Text, Hover, StyledCard } from "../../styles/style"
 const StoryCard = props => {
   return (
     <StyledCard unpadded key={props.id}>
-      <Card.Img
-        fluid
-        variant="top"
-        src={
-          "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg"
-        }
-      />
+      <Card.Img fluid variant="top" src={props.imgUri} />
       <Title small black>
         {props.title}
       </Title>
