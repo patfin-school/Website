@@ -1,68 +1,82 @@
-import React from "react"
-import Link from "gatsby"
-import styled from "styled-components"
+import { Link } from "gatsby"
+import React, { useState, useEffect } from "react"
+import Flex from "styled-flex-component"
+import { FiMenu } from "react-icons/fi"
 
-const Button = styled.button`
-  background: transparent;
-  border-radius: 5px;
-  border: 1.5px solid palevioletred;
-  color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-  font-size: 15px;
-`
+import { HeaderBody } from "../styles/style"
 
-const Div = styled.div`
-background:  #022b69;
-  padding-top: 10px;
-  color:   white;
-`
+const Header = props => {
+  const [Width, setWidth] = useState(null)
 
-const Li = styled.li`
-display: flex;
-padding: 10px 
-`
-const Nav = () => (
-  <Div>
-    <nav>
-      <ul>
-        <div>
-          <Li>
-            <a>Patfin</a>
-          </Li>
-        </div>
+  setTimeout(function() {
+    setWidth(window.innerWidth)
+  }, 1000)
 
-        <div>
-          <a>Gallery</a>
-          <Button href="#">Login</Button>
-        </div>
-      </ul>
+  const handleResize = value => {
+    setWidth(value)
+  }
 
-      <style jsx>{`
-        :global(body) {
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-            Helvetica, sans-serif;
-        }
-        nav {
-          text-align: center;
-        }
-        ul {
-          display: flex;
-          justify-content: space-between;
-        }
-        nav > ul {
-          padding: 0px  
-        }
-         
-        a {
-          color: #123abc;
-          text-decoration: none;
-          font-size: 14px;
-        }
-      `}</style>
-    </nav>
-  </Div>
-)
+  useEffect(() => {
+    window.addEventListener("resize", handleResize.bind(this))
+    return () => window.removeEventListener("resize", handleResize.bind(this))
+  }, [])
 
-export default Nav
+  return (
+    <div>
+      {Width >= 800 ? (
+        <HeaderBody>
+          <Flex justifyBetween>
+            <Flex>
+              <img
+                alt="logo"
+                style={{ maxWidth: "5em" }}
+                src={
+                  "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
+                }
+              />
+              <Link to="/">
+                <h2>Patfin</h2>
+              </Link>
+            </Flex>
+            <Flex>
+              <div style={{ paddingRight: "10px", paddingTop: "15px" }}>
+                <Link to="/blog/blog">
+                  <a> Blog</a>
+                </Link>
+
+                <Link to="/">
+                  <a> Activities </a>
+                </Link>
+
+                <Link to="/">
+                  <a> Academics</a>
+                </Link>
+              </div>
+            </Flex>
+          </Flex>
+        </HeaderBody>
+      ) : (
+        <HeaderBody>
+          <Flex justifyBetween>
+            <Flex>
+              <img
+                alt="logo"
+                style={{ maxWidth: "5em" }}
+                src={
+                  "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
+                }
+              />
+              <Link to="/">
+                <h3>Patfin</h3>
+              </Link>
+            </Flex>
+
+            <FiMenu style={{ fontSize: "2em" }} />
+          </Flex>
+        </HeaderBody>
+      )}
+    </div>
+  )
+}
+
+export default Header

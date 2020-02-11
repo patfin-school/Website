@@ -1,37 +1,156 @@
-import React from "react"
-import styled from "styled-components"
+import React, { useState, useEffect } from "react"
+import Flex from "styled-flex-component"
+import { FiMail, FiTwitter, FiFacebook } from "react-icons/fi"
+import { Link } from "gatsby"
 
-const Div = styled.div`
-    width : 100%
-    height : 15vh
-    background-color: #141E64
-    color : white
-    text-align: center;
-`
+import {
+  Text,
+  FooterBody,
+  FooterSection,
+  Title as Titles,
+} from "../styles/style"
 
-const Contain = styled.div`
-  padding-top: 25px;
-`
+const Footer = () => {
+  const Head = {
+    fontSize: "0.9em ",
+    fontWeight: "bold",
+    color: "#fff",
+  }
 
-const Copyright = styled.div`
-  font-size: 0.9em;
-`
+  const [Width, setWidth] = useState(null)
 
-const Text = styled.div`
-  font-size: 1.1em;
-`
+  setTimeout(function() {
+    setWidth(window.innerWidth)
+  }, 1000)
 
-export default function footer() {
+  const handleResize = value => {
+    setWidth(value)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize.bind(this))
+    return () => window.removeEventListener("resize", handleResize.bind(this))
+  }, [])
+
   return (
-    <Div>
-      <Contain>
-        <Text> Patfin School - Lagos , Nigeria , Africa.</Text>
-        <Copyright>
-          {" "}
-          Copyright © {new Date().getFullYear()}
-          <p>All rights reserved.</p>
-        </Copyright>
-      </Contain>
-    </Div>
+    <FooterBody>
+      {Width >= 700 ? (
+        <div style={{ padding: "2% 1%" }}>
+          <Flex justifyAround>
+            <div>
+              <br />
+              <Titles small bold>
+                Patfin School
+              </Titles>
+              <Flex justifyBetween>
+                <FiFacebook style={{ color: "blue", fontSize: "2.2em" }} />
+                <FiTwitter style={{ color: "blue", fontSize: "2.2em" }} />
+                <FiMail style={{ color: "red", fontSize: "2.2em" }} />
+              </Flex>
+            </div>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team
+              </Text>
+              <Text small white>
+                Documentation
+              </Text>
+              <Text small white>
+                Billing
+              </Text>
+            </Flex>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team
+              </Text>
+              <Text small white>
+                Documentation
+              </Text>
+              <Text small white>
+                Billing
+              </Text>
+            </Flex>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Create Team
+              </Text>
+              <Text small white>
+                Documentation
+              </Text>
+              <Text small white>
+                Billing
+              </Text>
+            </Flex>
+          </Flex>
+        </div>
+      ) : (
+        <div style={{ padding: "0.5%" }}>
+          <Flex justifyCenter>
+            <div>
+              <br />
+
+              <Titles small>Patfin School</Titles>
+
+              <Flex justifyAround>
+                <FiFacebook style={{ color: "black", fontSize: "2em" }} />
+                <FiTwitter style={{ color: "blue", fontSize: "2em" }} />
+                <FiMail style={{ color: "black", fontSize: "2em" }} />
+              </Flex>
+            </div>
+          </Flex>
+
+          <br />
+          <Flex justifyAround>
+            <Flex column>
+              <p style={Head}> PRODUCT </p>
+              <Text small white>
+                Jobs
+              </Text>
+              <Text small white>
+                Documentation
+              </Text>
+              <Text small white>
+                Billing
+              </Text>
+            </Flex>
+            <Flex column>
+              <p style={Head}> HELP </p>
+              <Text small white>
+                Create Team
+              </Text>
+              <Text small white>
+                Documentation
+              </Text>
+              <Text small white>
+                Billing
+              </Text>
+            </Flex>
+            <Flex column>
+              <p style={Head}> MORE </p>
+              <Text small white>
+                Admissions
+              </Text>
+              <Text small white>
+                Scheme
+              </Text>
+            </Flex>
+          </Flex>
+        </div>
+      )}
+
+      <FooterSection>
+        <Text small>
+          Copyright © {new Date().getFullYear()} , a subsidiary of the
+          <a href="https://www.fundry.netlify.com"> Fundry Program </a>.
+          <br /> <a href="/"> Terms of Service </a> or
+          <a href="/"> Privacy Policies </a>
+        </Text>
+      </FooterSection>
+    </FooterBody>
   )
 }
+
+export default Footer

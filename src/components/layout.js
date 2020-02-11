@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -18,11 +19,10 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div>
         <div
           style={{
             margin: `0 auto`,
-            maxWidth: 1150,
           }}
         >
           <Helmet>
@@ -42,10 +42,11 @@ const Layout = ({ children }) => (
               rel="stylesheet"
             />
           </Helmet>
-
+          <Header />
           <main>{children}</main>
+          <Footer />
         </div>
-      </>
+      </div>
     )}
   />
 )
