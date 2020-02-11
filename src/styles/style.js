@@ -14,8 +14,8 @@ const Text = styled.p`
 `
 
 const Body = styled.div`
-  padding-left: ${props => (props.banner ? "12em" : "8em")};
-  padding-right: ${props => (props.banner ? "12em" : "8em")};
+  padding-left: ${props => (props.banner ? "12em" : "5em")};
+  padding-right: ${props => (props.banner ? "12em" : "5em")};
   background: ${props => (props.banner ? "transparent" : null)};
   color: ${props => (props.banner ? "#401364" : null)};
   ${media.lessThan("large")`
@@ -36,11 +36,11 @@ const Button = styled.button`
   background: #401364;
   text-align: right;
   border-radius: 5px;
-  height: 50px;
+  height: 55px;
   color: #fff;
   border: 0px;
   outline: 0px;
-  margin: 0 1em;
+  margin: 0.5em;
   padding: 0.5em 3em;
   font-size: 1.2em;
   &:hover {
@@ -50,8 +50,8 @@ const Button = styled.button`
   }
   ${media.lessThan("medium")`
       margin: 0 0.25em;
-      padding: 0.50em 2em;
-      height: 45px;
+      padding: 0.25em 2em;
+      height: 47.7px;
       font-size: 1.1em;
   `};
 `
@@ -60,7 +60,8 @@ const Motto = styled.h1`
   font-size: 3em;
   font-weight: bold;
   ${media.lessThan("medium")`
-  font-size: 2.3em;
+  font-weight: 777px;
+  font-size: 2.2em;
   `};
   ${media.lessThan("small")`
   font-size:1.8em;
@@ -100,12 +101,24 @@ const HeaderBody = styled.nav`
     margin: 0.3em;
     font-size: 1.2em;
   }
+  ${media.lessThan("large")` 
+  padding: 0.3em 1em;
+  a {
+    margin: 0.3em;
+    font-size: 1.11em;
+  }  h2 {
+    font-size: 1.7em;
+    font-weight: 700px;
+    margin-left: 10px;
+  }
+  `};
 `
 
 const Input = styled.input`
   padding: 1em 5em;
   width: 40em;
-  border-radius: 5px;
+  outline: 0px;
+  border-radius: 7px;
   background: #f2f5ff;
   height: auto;
   padding-left: 15px;
@@ -116,6 +129,11 @@ const Input = styled.input`
   padding: 0.7em 4em;
   width : 28em;
   `};
+  ${media.lessThan("large")`
+  font-size: 1.1em;
+  padding: 0.7em 4em;
+  width : 30em;
+  `};
   ${media.lessThan("small")`
   font-size: 1em;
   width : 27em;
@@ -124,9 +142,9 @@ const Input = styled.input`
 
 const Title = styled.h2`
   text-align: center;
-  font-weight: ${props => (props.small ? "lighter" : "bold")};
+  font-weight: ${props => (props.bold ? "700px" : "lighter")};
   padding-top: 1%;
-  font-size: ${props => (props.small ? "1.8em" : null)};
+  font-size: ${props => (props.small ? "1.55em" : null)};
   color: ${props => (props.black ? "#0e2f5a" : "white")};
   ${media.lessThan("medium")`
   font-size: ${props => (props.small ? "1.5em" : null)};

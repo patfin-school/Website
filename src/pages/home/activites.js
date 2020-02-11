@@ -1,5 +1,6 @@
 import React from "react"
 import Flex from "styled-flex-component"
+import { FiCalendar } from "react-icons/fi"
 
 import Features from "../../assets/svg/features.svg"
 
@@ -49,25 +50,21 @@ const Activities = () => {
           return (
             <StyledCard key={id}>
               <br />
-              <Flex>
-                <div style={{ width: "19em" }}>
-                  <Flex column>
-                    <Flex justifyCenter>
-                      <img
-                        src={Features}
-                        alt="illustrattion"
-                        style={{ maxWidth: "5em" }}
-                      />
-                    </Flex>
-                    <h6> {date} </h6>
-                  </Flex>
-                </div>
-                <div>
-                  <Title small black>
-                    {name}
-                  </Title>
-                  <Text small> {summary} </Text>
-                </div>
+              <Flex justifyCenter>
+                <img
+                  src={Features}
+                  alt="illustrattion"
+                  style={{ maxWidth: "5em" }}
+                />
+              </Flex>
+              <Title small black bold>
+                {name}
+              </Title>
+              <Text small> {summary} </Text>
+              <Flex justifyCenter>
+                <Flex>
+                  <FiCalendar style={{ fontSize: "1.7em" }} /> <h6> {date} </h6>
+                </Flex>
               </Flex>
             </StyledCard>
           )

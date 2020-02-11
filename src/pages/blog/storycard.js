@@ -10,7 +10,7 @@ const StoryCard = props => {
   return (
     <StyledCard unpadded key={props.id}>
       <Card.Img fluid variant="top" src={props.imgUri} />
-      <Title small black>
+      <Title small black bold>
         {props.title}
       </Title>
       <Text center small>
@@ -23,7 +23,7 @@ const StoryCard = props => {
             <Hover style={{ paddingRight: "7px" }}>
               <FiClock style={{ fontSize: "1.7em", color: "grey" }} />
             </Hover>
-            <Text>{props.date}</Text>
+            <Text small>{props.date}</Text>
           </Flex>
 
           <Flex>

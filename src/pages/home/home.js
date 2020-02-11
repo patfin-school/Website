@@ -82,17 +82,17 @@ const Home = () => {
                   <Flex justifyCenter>
                     <img style={{}} src={Features} alt="features" />
                   </Flex>
-                  <Title black small>
+                  <Title black small bold>
                     {name}{" "}
                   </Title>
-                  <Text center> {text} </Text>>
+                  <Text center> {text} </Text>
                 </div>
               )
             })}
           </Items>
 
           <Flex justifyCenter>
-            {Width >= 630 ? (
+            {Width >= 750 ? (
               <div>
                 <Title black> Join Our Newsletter List. </Title>
                 <Flex>

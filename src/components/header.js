@@ -23,7 +23,7 @@ const Header = props => {
 
   return (
     <div>
-      {Width >= 700 ? (
+      {Width >= 800 ? (
         <HeaderBody>
           <Flex justifyBetween>
             <Flex>

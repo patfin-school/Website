@@ -38,11 +38,14 @@ const Footer = () => {
         <div style={{ padding: "2% 1%" }}>
           <Flex justifyAround>
             <div>
-              <Titles small>Patfin School</Titles>
-              <Flex justifyAround>
-                <FiFacebook style={{ color: "blue", fontSize: "2.5em" }} />
-                <FiTwitter style={{ color: "blue", fontSize: "2.5em" }} />
-                <FiMail style={{ color: "red", fontSize: "2.5em" }} />
+              <br />
+              <Titles small bold>
+                Patfin School
+              </Titles>
+              <Flex justifyBetween>
+                <FiFacebook style={{ color: "blue", fontSize: "2.2em" }} />
+                <FiTwitter style={{ color: "blue", fontSize: "2.2em" }} />
+                <FiMail style={{ color: "red", fontSize: "2.2em" }} />
               </Flex>
             </div>
             <Flex column>

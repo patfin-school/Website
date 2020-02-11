@@ -1,6 +1,5 @@
 import React from "react"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
+import Layout from "../../components/layout"
 
 import { Body, BlogItems } from "../../styles/style"
 import StoryCard from "./storycard"
@@ -8,12 +7,12 @@ import StoryCard from "./storycard"
 const Data = [
   {
     id: 1,
-    title: "Trip To Ibadan",
+    title: "My  Welcome back party experience",
     imgUri:
       "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg",
-    summary:
-      "Welcome back party experience Welcome Welcome back party experience Welcome back party experience ",
     created: "",
+    summary:
+      "Welcome back party experience Welcome experience Welcome back party experience Welcome back party experience ",
   },
   {
     id: 2,
@@ -25,17 +24,17 @@ const Data = [
       "Welcome back party experience Welcome experience Welcome back party experience Welcome back party experience ",
   },
   {
-    id: 1,
-    title: "Trip To Ibadan",
+    id: 3,
+    title: "Our Latest Excursion",
     imgUri:
       "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg",
-    summary:
-      "Welcome back party experience Welcome Welcome back party experience Welcome back party experience ",
     created: "",
+    summary:
+      "Welcome back party experience Welcome experience Welcome back party experience Welcome back party experience ",
   },
   {
-    id: 2,
-    title: "My  Welcome back party experience",
+    id: 4,
+    title: "My Last Class Party",
     imgUri:
       "https://res.cloudinary.com/dkfptto8m/image/upload/v1557942816/Mongodb%20hackathon%20project/2017-chevrolet-bolt-ev.jpg",
     created: "",
@@ -46,27 +45,23 @@ const Data = [
 
 const Blog = () => {
   return (
-    <div>
-      <Header />
+    <Layout>
       <Body>
-        <div>
+        <BlogItems>
           {Data.map(({ id, imgUri, title, summary, created }) => {
             return (
-              <BlogItems>
-                <StoryCard
-                  id={id}
-                  img={imgUri}
-                  title={title}
-                  summary={summary}
-                  date={created}
-                />{" "}
-              </BlogItems>
+              <StoryCard
+                id={id}
+                img={imgUri}
+                title={title}
+                summary={summary}
+                date={created}
+              />
             )
           })}
-        </div>
+        </BlogItems>
       </Body>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 
