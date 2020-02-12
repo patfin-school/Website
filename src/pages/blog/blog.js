@@ -1,6 +1,7 @@
 import React from "react"
-import Layout from "../../components/layout"
+import { gql } from "apollo-boost"
 
+import Layout from "../../components/layout"
 import { Body, BlogItems } from "../../styles/style"
 import StoryCard from "./storycard"
 
@@ -42,6 +43,14 @@ const Data = [
       "Welcome back party experience Welcome experience Welcome back party experience Welcome back party experience ",
   },
 ]
+
+const Test = gql`
+  query test {
+    Users {
+      name
+    }
+  }
+`
 
 const Blog = () => {
   return (

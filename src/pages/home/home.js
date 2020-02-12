@@ -96,10 +96,10 @@ const Home = () => {
           <Flex justifyCenter>
             {Width >= 750 ? (
               <div>
-                <Title black> Join Our Newsletter List. </Title>
+                <Title black> Subscribe To Our Newsletter List. </Title>
                 <Flex>
                   <Input placeholder="Enter Email Address" type="text" />{" "}
-                  <Button> Join </Button>
+                  <Button rounded> Join </Button>
                 </Flex>
               </div>
             ) : (

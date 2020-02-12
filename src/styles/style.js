@@ -2,14 +2,14 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 const Text = styled.p`
-  font-size: ${props => (props.small ? " 1.15em" : "1.4em")};
+  font-size: ${props => (props.small ? " 1.10rem" : "1.3rem")};
   text-align: ${props => (props.center ? "center" : null)};
   color: ${props => (props.white ? "#fff" : null)};
   ${media.lessThan("medium")`
-  font-size: ${props => (props.small ? " 1.15em" : "1.3em")};
+  font-size: ${props => (props.small ? " 1.10rem" : "1.2rem")};
   `};
   ${media.lessThan("small")`
-  font-size: ${props => (props.small ? " 1.15em" : "1.2em")};
+  font-size: ${props => (props.small ? " 1.15rem" : "1.2rem")};
   `};
 `
 
@@ -35,10 +35,10 @@ const Body = styled.div`
 const Button = styled.button`
   background: #401364;
   text-align: right;
-  border-radius: 5px;
   height: 55px;
   color: #fff;
   border: 0px;
+  border-radius: ${props => (props.rounded ? "0.7em" : "7px")};
   outline: 0px;
   margin: 0.5em;
   padding: 0.5em 3em;
@@ -60,8 +60,12 @@ const Motto = styled.h1`
   font-size: 3em;
   font-weight: bold;
   ${media.lessThan("medium")`
-  font-weight: 777px;
-  font-size: 2.2em;
+  font-weight: 740px;
+  font-size: 2em;
+  `};
+  ${media.lessThan("large")`
+  font-weight: 750px;
+  font-size: 2.4em;
   `};
   ${media.lessThan("small")`
   font-size:1.8em;
@@ -118,24 +122,27 @@ const Input = styled.input`
   padding: 1em 5em;
   width: 40em;
   outline: 0px;
-  border-radius: 7px;
+  border-radius: 2em 0em 2em 0em;
   background: #f2f5ff;
   height: auto;
   padding-left: 15px;
   font-size: 1.1em;
-  border: 1px solid #0e2f5a;
+  border: 1.2px solid #0e2f5a;
   ${media.lessThan("medium")`
-  font-size: 1.1em;
-  padding: 0.7em 4em;
+  border-radius: 1em;
+  font-size: 1.1em; 
+  padding: 0.4em 1em;
   width : 28em;
   `};
   ${media.lessThan("large")`
   font-size: 1.1em;
-  padding: 0.7em 4em;
-  width : 30em;
+  border-radius: 1em;
+  padding: 0.3em 1em;
+  width : 28em;
   `};
   ${media.lessThan("small")`
-  font-size: 1em;
+  border-radius: 0.5em;
+  font-size: 1em;  
   width : 27em;
   `};
 `
@@ -144,13 +151,13 @@ const Title = styled.h2`
   text-align: center;
   font-weight: ${props => (props.bold ? "700px" : "lighter")};
   padding-top: 1%;
-  font-size: ${props => (props.small ? "1.55em" : null)};
+  font-size: ${props => (props.small ? "1.55rem" : null)};
   color: ${props => (props.black ? "#0e2f5a" : "white")};
   ${media.lessThan("medium")`
-  font-size: ${props => (props.small ? "1.5em" : null)};
+  font-size: ${props => (props.small ? "1.5rem" : null)};
   `};
   ${media.lessThan("small")`
-  font-size: ${props => (props.small ? "1.4em" : null)};
+  font-size: ${props => (props.small ? "1.4rem" : null)};
   `};
 `
 
