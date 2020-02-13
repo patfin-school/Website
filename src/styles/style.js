@@ -153,9 +153,10 @@ const Input = styled.input`
 `
 
 const Title = styled.h2`
-  text-align: center;
+  text-align: ${props => (props.uncentered ? null : "center")};
   font-weight: ${props => (props.bold ? "700px" : "lighter")};
   padding-top: 1%;
+  padding-left: ${props => (props.uncentered ? "40px" : null)};
   font-size: ${props => (props.small ? "1.55rem" : null)};
   color: ${props => (props.black ? "#0e2f5a" : "white")};
   ${media.lessThan("medium")`
@@ -238,7 +239,26 @@ const ActivitiesItems = styled.div({
 
 const Links = styled.p``
 
+const ArticleBody = styled.article`
+  font-size: 1.2em;
+  text-indent: 2.5rem;
+  font-family: comic sans ms;
+  ${media.lessThan("large")`
+  text-indent: 2rem;
+  font-size: 1.3em
+  `};
+  ${media.lessThan("medium")`
+  text-indent: 1.7rem;
+  font-size: 1.2em;
+  `};
+  ${media.lessThan("small")`
+  text-indent: 1.5rem;
+  font-size: 1.1em;
+  `};
+`
+
 export {
+  ArticleBody,
   ActivitiesItems,
   Links,
   FooterSection,

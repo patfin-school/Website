@@ -98,7 +98,11 @@ const Home = () => {
               return (
                 <div key={id}>
                   <Flex justifyCenter>
-                    <img style={{}} src={Features} alt="features" />
+                    <img
+                      style={{ maxWidth: "9rem" }}
+                      src={Features}
+                      alt="features"
+                    />
                   </Flex>
                   <Title black small bold>
                     {name}
