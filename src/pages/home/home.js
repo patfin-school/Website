@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Flex from "styled-flex-component"
+import { FiPhoneCall, FiMap } from "react-icons/fi"
 
 import Layout from "../../components/layout"
 import Banner from "../../components/banner"
@@ -67,12 +68,29 @@ const Home = () => {
       <Body>
         <div>
           <br />
-          <Text center>
-            Patfin School Description Patfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-            Patfin School Description Patfin School Description Patfin School
-            Description Patfin School Description Patfin School Description
-          </Text>
+          <div>
+            <Body>
+              <Text center>
+                Patfin School Description Patfin School Description Patfin
+                School Description Patfin School Description Patfin School
+                Description Patfin School Description Patfin School Description
+                Patfin School Description Patfin School Description Patfin
+                School Description
+              </Text>{" "}
+            </Body>
+            <Flex justifyCenter>
+              <Button>
+                <FiPhoneCall
+                  style={{ paddingRight: "10px", fontSize: "2rem" }}
+                />{" "}
+                Contact Support{" "}
+              </Button>
+              <Button>
+                <FiMap style={{ paddingRight: "10px", fontSize: "2rem" }} />{" "}
+                View Location{" "}
+              </Button>
+            </Flex>
+          </div>
           <br />
 
           <Items>
@@ -83,7 +101,7 @@ const Home = () => {
                     <img style={{}} src={Features} alt="features" />
                   </Flex>
                   <Title black small bold>
-                    {name}{" "}
+                    {name}
                   </Title>
                   <Text center small>
                     {text}{" "}

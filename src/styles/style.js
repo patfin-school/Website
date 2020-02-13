@@ -32,15 +32,20 @@ const Body = styled.div`
   `};
 `
 
+const Tiny = styled.p`
+  font-size: 1.2em;
+`
+
 const Button = styled.button`
   background: #401364;
   text-align: right;
   height: 55px;
   color: #fff;
   border: 0px;
-  border-radius: ${props => (props.rounded ? "0.7em" : "7px")};
+  border-radius: ${props => (props.rounded ? "0.7em" : "4px")};
   outline: 0px;
-  margin: 0.5em;
+  margin: 0.3em;
+  margin-left: 1em;
   padding: 0.5em 3em;
   font-size: 1.2em;
   &:hover {
@@ -122,21 +127,21 @@ const Input = styled.input`
   padding: 1em 5em;
   width: 40em;
   outline: 0px;
-  border-radius: 2em 0em 2em 0em;
+  border-radius: 1.5em 0em 1.5em 0em;
   background: #f2f5ff;
-  height: auto;
+  height: 7vh;
   padding-left: 15px;
-  font-size: 1.1em;
+  font-size: 1em;
   border: 1.2px solid #0e2f5a;
   ${media.lessThan("medium")`
-  border-radius: 1em;
-  font-size: 1.1em; 
+  border-radius: 0.7em;
+  font-size: 1em; 
   padding: 0.4em 1em;
   width : 28em;
   `};
   ${media.lessThan("large")`
   font-size: 1.1em;
-  border-radius: 1em;
+  border-radius: 0.7em;
   padding: 0.3em 1em;
   width : 28em;
   `};
@@ -161,9 +166,9 @@ const Title = styled.h2`
   `};
 `
 
-const autoGrid = (minColumnWidth = 200, gridGap = 0) => ({
+const autoGrid = (minColumnWidth = 250, gridGap = 0) => ({
   display: "grid",
-  gridTemplateColumns: `repeat(auto-fill, minmax(${minColumnWidth}px, 1fr))`,
+  gridTemplateColumns: `repeat(auto-fill, minmax(${minColumnWidth}px, 3fr))`,
   gridGap,
 })
 
@@ -174,7 +179,7 @@ const Items = styled.div({
 })
 
 const BlogItems = styled.div({
-  ...autoGrid(250, 70),
+  ...autoGrid(300, 100),
   padding: "1em",
   marginLeft: "0.5em",
 })
@@ -187,12 +192,12 @@ const SummaryBody = styled.div`
 const StyledCard = styled.div`
   width: 100%;
   box-shadow: 0px 4px 5px grey;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   background-color: white;
   border-radius: 10px;
   padding: ${props => (props.unpadded ? null : "1.3em")};
   h6 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     color: #0e2f5a;
   }
@@ -214,10 +219,10 @@ const FooterBody = styled.footer`
 `
 
 const FooterSection = styled.div`
-  margin-top: 1em;
+  margin-top: 0.7em;
   padding-top: 0.5em;
   text-align: center;
-  padding: 0.7%;
+  padding: 0.5%;
   background-color: #361f94;
   font-size: 0.8em;
   color: #fff;
@@ -251,5 +256,6 @@ export {
   BannerBody,
   SummaryBody,
   Button,
+  Tiny,
   HeaderBody,
 }

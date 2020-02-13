@@ -44,15 +44,13 @@ const Summary = () => {
       <BlogItems>
         {Data.map(({ id, title, summary, imgUri, created }) => {
           return (
-            <BlogItems>
-              <StoryCard
-                id={id}
-                title={title}
-                summary={summary}
-                img={imgUri}
-                date={created}
-              />
-            </BlogItems>
+            <StoryCard
+              id={id}
+              title={title}
+              summary={summary}
+              img={imgUri}
+              date={created}
+            />
           )
         })}
       </BlogItems>
