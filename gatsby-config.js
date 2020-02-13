@@ -15,7 +15,7 @@ module.exports = {
         // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
         fieldName: "users",
         // Url to query from
-        url: "http://127.0.0.1:8080/v1/graphql",
+        url: process.env.GRAPHQL_ENDPOINT,
       },
     },
     {
