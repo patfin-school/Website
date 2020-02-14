@@ -6,10 +6,10 @@ const Text = styled.p`
   text-align: ${props => (props.center ? "center" : null)};
   color: ${props => (props.white ? "#fff" : null)};
   ${media.lessThan("medium")`
-  font-size: ${props => (props.small ? " 1.10rem" : "1.2rem")};
+  font-size: ${props => (props.small ? " 1.05rem" : "1.1rem")};
   `};
   ${media.lessThan("small")`
-  font-size: ${props => (props.small ? " 1.15rem" : "1.2rem")};
+  font-size: ${props => (props.small ? " 1.05rem" : "1.1rem")};
   `};
 `
 
@@ -91,11 +91,11 @@ const BannerBody = styled.div`
 `
 
 const HeaderBody = styled.nav`
-  padding: 0.7em 1em;
+  padding: 0.2em 0.7em;
   background-color: #f2f5ff;
   box-shadow: 0px 3px 4px grey;
   h2 {
-    font-size: 1.8em;
+    font-size: 1.7em;
     font-weight: bold;
     margin-left: 20px;
     color: #0e2f5a;
@@ -116,7 +116,7 @@ const HeaderBody = styled.nav`
     margin: 0.3em;
     font-size: 1.11em;
   }  h2 {
-    font-size: 1.7em;
+    font-size: 1.6em;
     font-weight: 700px;
     margin-left: 10px;
   }

@@ -12,10 +12,11 @@ module.exports = {
       options: {
         // Arbitrary name for the remote schema Query type
         typeName: "Users",
-        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        // Field under which the remote schema will be accessible.
         fieldName: "users",
         // Url to query from
         url: process.env.GRAPHQL_ENDPOINT,
+        // setup createhttplink
       },
     },
     {

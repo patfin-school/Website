@@ -39,7 +39,7 @@ const Header = props => {
               </Link>
             </Flex>
             <Flex>
-              <div style={{ paddingRight: "10px", paddingTop: "15px" }}>
+              <div style={{ paddingRight: "10px", paddingTop: "10px" }}>
                 <Link to="/blog/blog">
                   <a> Blog</a>
                 </Link>
