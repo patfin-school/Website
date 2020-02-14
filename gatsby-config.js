@@ -2,6 +2,7 @@ require("dotenv").config
 const fetch = require("isomorphic-fetch")
 const createHttpLink = require("apollo-link-http")
 
+console.log(process.env.GRAPHQL_LOCAL, "env p")
 module.exports = {
   siteMetadata: {
     title: `Patfin School`,
@@ -15,16 +16,17 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         // Arbitrary name for the remote schema Query type
-        typeName: "Users",
+        typeName: "Cases",
         // Field under which the remote schema will be accessible.
-        fieldName: "users",
-        createLink: () => {
-          return createHttpLink({
-            uri: process.env.GRAPHQL_ENDPOINT,
-            headers: { "x-hasura-admin-secret": process.env.HASURA_SECRET },
-            fetch,
-          })
-        },
+        fieldName: "Cases",
+        // createLink: () => {
+        //   return createHttpLink({
+        //     uri: 'http://127.0.0.1:8080/v1/graphql',
+        //     // headers: { 'x-hasura-admin-secret': process.env.HASURA_SECRET },
+        //     fetch,
+        //   });
+        // },
+        url: "http://127.0.0.1:8080/v1/graphql",
       },
     },
     {

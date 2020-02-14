@@ -46,19 +46,19 @@ const Data = [
   },
 ]
 
-const TEST = graphql`
-  query test {
-    activities {
-      name
-      id
-      venue
-      summary
-      date
-      content
-      upcoming
-    }
-  }
-`
+// const TEST = graphql`
+//   query test {
+//     activities {
+//       name
+//       id
+//       venue
+//       summary
+//       date
+//       content
+//       upcoming
+//     }
+//   }
+// `
 
 const Home = () => {
   const [Width, setWidth] = useState(null)

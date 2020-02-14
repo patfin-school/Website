@@ -1,26 +1,27 @@
 const path = require(`path`)
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-
-  const result = await graphql(` 
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
+  const result = await graphql(`
     {
-  articles {
-    title
-    author
-    id
-    content
-  }
- `)
+      Cases {
+        Cases {
+          author
+          title
+          created
+          id
+        }
+      }
+    }
+  `)
 
-  const articles = result.articles
-  console.log(articles)
+  const articles = result.data.Cases.Cases
+  console.log(articles, "case")
   articles.forEach(edge => {
     createPage({
-      path: `/blog/blog/${id}`,
-      component: path.resolve(`./src/pages/blog/blog`),
+      path: `/blog/blog/${articles.id}`,
+      component: require.resolve(`./src/templates/article.js`),
       context: {
-        id: id,
+        id: articles.id,
       },
     })
   })

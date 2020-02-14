@@ -2,9 +2,9 @@ import React from "react"
 import Flex from "styled-flex-component"
 import { Image } from "react-bootstrap"
 
-import Layout from "../../components/layout"
-import { Body, BlogItems, ArticleBody, Title, Text } from "../../styles/style"
-import StoryCard from "./storycard"
+import Layout from "../components/layout"
+import { Body, BlogItems, ArticleBody, Title, Text } from "../styles/style"
+import StoryCard from "../pages/blog/storycard"
 
 const Data = {
   author: "Francis Nwani",
