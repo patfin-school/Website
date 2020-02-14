@@ -1,3 +1,7 @@
+require("dotenv").config
+const fetch = require("isomorphic-fetch")
+const createHttpLink = require("apollo-link-http")
+
 module.exports = {
   siteMetadata: {
     title: `Patfin School`,
@@ -14,9 +18,13 @@ module.exports = {
         typeName: "Users",
         // Field under which the remote schema will be accessible.
         fieldName: "users",
-        // Url to query from
-        url: process.env.GRAPHQL_ENDPOINT,
-        // setup createhttplink
+        createLink: () => {
+          return createHttpLink({
+            uri: process.env.GRAPHQL_ENDPOINT,
+            headers: { "x-hasura-admin-secret": process.env.HASURA_SECRET },
+            fetch,
+          })
+        },
       },
     },
     {

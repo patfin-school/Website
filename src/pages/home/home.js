@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Flex from "styled-flex-component"
 import { FiPhoneCall, FiMap } from "react-icons/fi"
+import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
 import Banner from "../../components/banner"
@@ -44,6 +45,20 @@ const Data = [
       "Your children arev taught with children arev taugh arev taught with children arev taught with ",
   },
 ]
+
+const TEST = graphql`
+  query test {
+    activities {
+      name
+      id
+      venue
+      summary
+      date
+      content
+      upcoming
+    }
+  }
+`
 
 const Home = () => {
   const [Width, setWidth] = useState(null)

@@ -97,8 +97,10 @@ const HeaderBody = styled.nav`
   h2 {
     font-size: 1.7em;
     font-weight: bold;
-    margin-left: 20px;
     color: #0e2f5a;
+  }
+  img {
+    margin-left: 10px;
   }
   h3 {
     color: #0e2f5a;

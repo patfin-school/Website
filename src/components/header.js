@@ -29,9 +29,9 @@ const Header = props => {
             <Flex>
               <img
                 alt="logo"
-                style={{ maxWidth: "5em" }}
+                style={{ maxWidth: "4em" }}
                 src={
-                  "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
+                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1558522007/Patfin/banner.png"
                 }
               />
               <Link to="/">
@@ -61,9 +61,9 @@ const Header = props => {
             <Flex>
               <img
                 alt="logo"
-                style={{ maxWidth: "5em" }}
+                style={{ maxWidth: "3em" }}
                 src={
-                  "https:/a/res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"
+                  "https://res.cloudinary.com/dkfptto8m/image/upload/v1558522007/Patfin/banner.png"
                 }
               />
               <Link to="/">

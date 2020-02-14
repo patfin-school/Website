@@ -7,6 +7,7 @@
   "dependencies": {
     "apollo-boost": "^0.4.7",
     "apollo-link-error": "^1.1.12",
+    "apollo-link-http": "^1.5.16",
     "babel-plugin-styled-components": "^1.10.6",
     "dotenv-cli": "^3.1.0",
     "gatsby": "^2.18.12",
@@ -22,6 +23,7 @@
     "gatsby-source-graphql": "^2.1.33",
     "gatsby-transformer-sharp": "^2.3.7",
     "husky": "^3.1.0",
+    "isomorphic-fetch": "^2.2.1",
     "pose": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
