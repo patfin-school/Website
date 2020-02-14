@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import { Body, BlogItems, ArticleBody, Title, Text } from "../styles/style"
 import StoryCard from "../pages/blog/storycard"
 
+import { graphql } from "gatsby"
+
 const Data = {
   author: "Francis Nwani",
   created: "12th,  November,  2017",
@@ -34,7 +36,20 @@ const Stories = [
   },
 ]
 
-const Article = () => {
+export const query = graphql`
+  query {
+    Cases {
+      Cases {
+        author
+        title
+        created
+        id
+      }
+    }
+  }
+`
+
+const Article = ({ data }) => {
   return (
     <Layout>
       <br />
