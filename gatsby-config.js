@@ -10,7 +10,7 @@ const SECRET = process.env.GATSBY_HASURA_SECRET
 module.exports = {
   siteMetadata: {
     title: `Patfin School`,
-    description: `Official brand website for patfin School`,
+    description: `Building a future generation of learned ones.`,
     author: `@gatsbyjs`,
   },
   plugins: [
