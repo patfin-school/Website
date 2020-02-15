@@ -1,11 +1,11 @@
 import React from "react"
-import { gql } from "apollo-boost"
+import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
 import { Body, BlogItems } from "../../styles/style"
 import StoryCard from "./storycard"
 
-const Data = [
+const Data1 = [
   {
     id: 1,
     title: "My  Welcome back party experience",
@@ -44,27 +44,33 @@ const Data = [
   },
 ]
 
-const Test = gql`
-  query test {
-    Users {
-      name
+export const query = graphql`
+  {
+    articles {
+      articles {
+        title
+        author
+        id
+        content
+      }
     }
   }
 `
 
-const Blog = () => {
+const Blog = ({ data }) => {
+  console.log(data, "data")
+
   return (
     <Layout>
       <Body>
         <BlogItems>
-          {Data.map(({ id, imgUri, title, summary, created }) => {
+          {data.articles.articles.map(({ id, title, content }) => {
             return (
               <StoryCard
                 id={id}
-                img={imgUri}
                 title={title}
-                summary={summary}
-                date={created}
+                summary={content}
+                date="12-12-12"
               />
             )
           })}

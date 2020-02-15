@@ -7,8 +7,6 @@ const createHttpLink = require("apollo-link-http")
 const URL = process.env.GATSBY_GRAPHQL_ENDPOINT
 const SECRET = process.env.GATSBY_HASURA_SECRET
 
-console.log(SECRET, URL)
-
 module.exports = {
   siteMetadata: {
     title: `Patfin School`,

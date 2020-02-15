@@ -1,19 +1,12 @@
 import React from "react"
 import Flex from "styled-flex-component"
 import { Image } from "react-bootstrap"
+import { graphql } from "gatsby"
+import { useQuery } from "@apollo/react-hooks"
 
 import Layout from "../components/layout"
 import { Body, BlogItems, ArticleBody, Title, Text } from "../styles/style"
 import StoryCard from "../pages/blog/storycard"
-
-import { graphql } from "gatsby"
-
-const Data = {
-  author: "Francis Nwani",
-  created: "12th,  November,  2017",
-  title: "My Trip To Ibadan",
-  content: "",
-}
 
 const Stories = [
   {
@@ -36,24 +29,26 @@ const Stories = [
   },
 ]
 
-// export const query = graphql`
-//   query {
-//     Cases {
-//       Cases {
-//         author
-//         title
-//         created
-//         id
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  {
+    articles {
+      articles {
+        title
+        author
+        id
+        content
+      }
+    }
+  }
+`
 
 const Article = ({ data }) => {
+  const Article = data.articles.articles
+
   return (
     <Layout>
       <br />
-      <Body>
+      <Body id={Article.id}>
         <Flex justifyBetween>
           <Flex>
             <Image
@@ -63,64 +58,14 @@ const Article = ({ data }) => {
               style={{ marginRight: "15px", marginLeft: "20px" }}
             />
             <Title black small>
-              {Data.author}{" "}
+              {Article.author}
             </Title>
           </Flex>
 
-          <Text small> {Data.created} </Text>
+          <Text small> {Article.title} </Text>
         </Flex>
-        <Title black> {Data.title} </Title>
-        <ArticleBody>
-          The date was 10th , October 2019. It was a morning welcomed with a
-          sweet smelling aroma of freshly fried bean cakes It was a morning
-          welcomed with a sweet smelling aroma of freshly fried bean cakes It
-          was a morning welcomed with a sweet smelling aroma of freshly fried
-          bean cakes It was a morning welcomed with a sweet smelling aroma of
-          freshly fried bean cakes It was a morning welcomed with a sweet
-          smelling aroma of freshly fried bean cakes It was a morning welcomed
-          with a sweet smelling aroma of freshly fried bean cakes It was a
-          morning welcomed with a sweet smelling aroma of freshly fried bean
-          cakes It was a morning welcomed with a sweet smelling aroma of freshly
-          fried bean cakes It was a morning welcomed with a sweet smelling aroma
-          of freshly fried bean cakes It was a morning welcomed with a sweet
-          smelling aroma of freshly fried bean cakes It was a morning welcomed
-          with a sweet smelling aroma of freshly fried bean cakes It was a
-          morning welcomed with a sweet smelling aroma of freshly fried bean
-          cakes It was a morning welcomed with a sweet smelling aroma of freshly
-          fried bean cakes{" "}
-        </ArticleBody>
-        <br />
-        <ArticleBody>
-          It was a morning welcomed with a sweet smelling aroma of freshly fried
-          bean cakes It was a morning welcomed with a sweet smelling aroma of
-          freshly fried bean cakes It was a morning welcomed with a sweet
-          smelling aroma of freshly fried bean cakes It was a morning welcomed
-          with a sweet smelling aroma of freshly fried bean cakes It was a
-          morning welcomed with a sweet smelling aroma of freshly fried bean
-          cakes It was a morning welcomed with a sweet smelling aroma of freshly
-          fried bean cakes It was a morning welcomed with a sweet smelling aroma
-          of freshly fried bean cakes It was a morning welcomed with a sweet
-          smelling aroma of freshly fried bean cakes It was a morning welcomed
-          with a sweet smelling aroma of freshly fried bean cakes It was a
-          morning welcomed with a sweet smelling aroma of freshly fried bean
-          cakes It was a morning welcomed with a sweet smelling aroma of freshly
-          fried bean cakes It was a morning welcomed with a sweet smelling aroma
-          of freshly fried bean cakes It was a morning welcomed with a sweet
-          smelling aroma of freshly fried bean cakes
-        </ArticleBody>{" "}
-        <br />
-        <ArticleBody>
-          It was a morning welcomed with a sweet smelling aroma of freshly fried
-          bean cakes It was a morning welcomed with a sweet smelling aroma of
-          freshly fried bean cakes It was a morning welcomed with a sweet
-          smelling aroma of freshly fried bean cakes It was a morning welcomed
-          with a sweet smelling aroma of freshly fried bean cakes It was a
-          morning welcomed with a sweet smelling aroma of freshly fried bean
-          cakes It was a morning welcomed with a sweet smelling aroma of freshly
-          fried bean cakes It was a morning welcomed with a sweet smelling aroma
-          of freshly fried bean cakes It was a morning welcomed with a sweet
-          smelling aroma of freshly fried bean cakes
-        </ArticleBody>
+        <Title black> {Article.title} </Title>
+        <ArticleBody>{Article.content}</ArticleBody>
         <br />
         <Body>
           <Title bold uncentered black small>

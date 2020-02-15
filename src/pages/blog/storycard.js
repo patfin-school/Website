@@ -7,8 +7,10 @@ import { Link } from "gatsby"
 import { Title, Contain, Text, Hover, StyledCard } from "../../styles/style"
 
 const StoryCard = props => {
+  const { id } = props
+
   return (
-    <StyledCard unpadded key={props.id}>
+    <StyledCard unpadded key={id}>
       <Card.Img fluid variant="top" src={props.imgUri} />
       <Title small black bold>
         {props.title}
@@ -35,7 +37,7 @@ const StoryCard = props => {
         </Flex>
 
         <Flex justifyCenter>
-          <Link to="/">
+          <Link to={`/article/${id}`}>
             <Flex>
               <h5> Read More</h5>
 
