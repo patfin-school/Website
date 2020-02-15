@@ -21,7 +21,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
   //         title
   //         created
   //         id
-  //       }
+  //       }zp
   //     }
   //   }a
 
@@ -29,13 +29,13 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const articles = result.data.articles.articles
   console.log(articles)
 
-  articles.forEach(edge => {
-    createPage({
-      path: `/templates/article/${articles.id}`,
-      component: require.resolve(`./src/templates/article.js`),
-      context: {
-        id: articles.id,
-      },
-    })
-  })
+  // articles.forEach((edge) => {
+  //   createPage({
+  //     path: `/templates/article/${articles.id}`,
+  //     component: require.resolve(`./src/templates/article.js`),
+  //     context: {
+  //       id: articles.id,
+  //     },
+  //   });
+  // });
 }
