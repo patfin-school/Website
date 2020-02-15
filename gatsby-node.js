@@ -3,19 +3,32 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const result = await graphql(`
     {
-      Cases {
-        Cases {
-          author
+      articles {
+        articles {
           title
-          created
+          author
           id
+          content
         }
       }
     }
   `)
 
-  const articles = result.data.Cases.Cases
-  console.log(articles, "case")
+  // {
+  //     Cases {
+  //       Cases {
+  //         author
+  //         title
+  //         created
+  //         id
+  //       }
+  //     }
+  //   }a
+
+  // const articles = result.data.Cases.Cases;
+  const articles = result.data.articles.articles
+  console.log(articles)
+
   articles.forEach(edge => {
     createPage({
       path: `/templates/article/${articles.id}`,

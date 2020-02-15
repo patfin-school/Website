@@ -7,6 +7,8 @@ const createHttpLink = require("apollo-link-http")
 const URL = process.env.GATSBY_GRAPHQL_ENDPOINT
 const SECRET = process.env.GATSBY_HASURA_SECRET
 
+console.log(SECRET, URL)
+
 module.exports = {
   siteMetadata: {
     title: `Patfin School`,
@@ -20,9 +22,9 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         // Arbitrary name for the remote schema Query type
-        typeName: "Cases",
+        typeName: "articles",
         // Field under which the remote schema will be accessible.
-        fieldName: "Cases",
+        fieldName: "articles",
         url: URL,
         headers: { "x-hasura-admin-secret": SECRET },
         // createLink: (pluginOptions) => {

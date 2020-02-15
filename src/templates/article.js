@@ -36,18 +36,18 @@ const Stories = [
   },
 ]
 
-export const query = graphql`
-  query {
-    Cases {
-      Cases {
-        author
-        title
-        created
-        id
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     Cases {
+//       Cases {
+//         author
+//         title
+//         created
+//         id
+//       }
+//     }
+//   }
+// `
 
 const Article = ({ data }) => {
   return (
