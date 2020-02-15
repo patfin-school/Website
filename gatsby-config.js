@@ -1,8 +1,12 @@
-require("dotenv").config
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 const fetch = require("isomorphic-fetch")
 const createHttpLink = require("apollo-link-http")
 
-console.log(process.env.GRAPHQL_LOCAL, "env p")
+const URL = process.env.GATSBY_GRAPHQL_ENDPOINT
+const SECRET = process.env.GATSBY_HASURA_SECRET
+
 module.exports = {
   siteMetadata: {
     title: `Patfin School`,
@@ -19,14 +23,15 @@ module.exports = {
         typeName: "Cases",
         // Field under which the remote schema will be accessible.
         fieldName: "Cases",
-        // createLink: () => {
+        url: URL,
+        headers: { "x-hasura-admin-secret": SECRET },
+        // createLink: (pluginOptions) => {
         //   return createHttpLink({
-        //     uri: 'http://127.0.0.1:8080/v1/graphql',
-        //     // headers: { 'x-hasura-admin-secret': process.env.HASURA_SECRET },
+        //     uri: URL,
+        //     headers: { 'x-hasura-admin-secret': SECRET },
         //     fetch,
         //   });
         // },
-        url: "http://127.0.0.1:8080/v1/graphql",
       },
     },
     {
@@ -50,8 +55,5 @@ module.exports = {
         icon: `src/images/banner.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
