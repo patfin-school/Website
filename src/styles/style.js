@@ -33,7 +33,7 @@ const Body = styled.div`
 `
 
 const Tiny = styled.p`
-  font-size: ${props => (props.small ? "0.95em" : "11em")};
+  font-size: ${props => (props.small ? "0.95em" : "1.1em")};
   color: ${props => (props.white ? "#fff" : null)};
 `
 

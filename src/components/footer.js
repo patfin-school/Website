@@ -39,22 +39,26 @@ const Footer = () => {
       <FooterBody>
         {Width >= 700 ? (
           <div style={{ padding: "2% 1%" }}>
-            <FooterSection>
-              <Body>
-                <Flex justifyBetween>
-                  <Tiny white>
-                    11,Oyelami Street , Akeasan , Lagos State , Nigeria{" "}
-                  </Tiny>
-                  <Tiny white>Patfin@gmail.com</Tiny>
-                </Flex>{" "}
-              </Body>
-              <Flex justifyBetween>
-                <FiFacebook style={{ color: "blue", fontSize: "2.2em" }} />
-                <FiTwitter style={{ color: "blue", fontSize: "2.2em" }} />
-                <FiMail style={{ color: "red", fontSize: "2.2em" }} />
-              </Flex>
-            </FooterSection>
             <Flex justifyAround>
+              <Body>
+                <Text bold white>
+                  Patfin School{" "}
+                </Text>
+                <Flex column>
+                  <Tiny white small>
+                    11,Oyelami Street , Akeasan , Lagos
+                  </Tiny>
+                  <Tiny white small>
+                    Patfin@gmail.com
+                  </Tiny>
+                </Flex>
+                <Flex justifyBetween>
+                  <FiFacebook style={{ color: "blue", fontSize: "2.2em" }} />
+                  <FiTwitter style={{ color: "blue", fontSize: "2.2em" }} />
+                  <FiMail style={{ color: "red", fontSize: "2.2em" }} />
+                </Flex>
+              </Body>
+
               <Flex column>
                 <p style={Head}> ACADEMICS </p>
                 <Text small white>
