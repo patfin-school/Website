@@ -33,7 +33,8 @@ const Body = styled.div`
 `
 
 const Tiny = styled.p`
-  font-size: 1.2em;
+  font-size: ${props => (props.small ? "0.95em" : "11em")};
+  color: ${props => (props.white ? "#fff" : null)};
 `
 
 const Button = styled.button`
@@ -148,9 +149,9 @@ const Input = styled.input`
   width : 28em;
   `};
   ${media.lessThan("small")`
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   font-size: 1em;  
-  width : 27em;
+  width : 21em;
   `};
 `
 

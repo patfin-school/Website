@@ -46,20 +46,6 @@ const Data = [
   },
 ]
 
-// const TEST = graphql`
-//   query test {
-//     activities {
-//       name
-//       id
-//       venue
-//       summary
-//       date
-//       content
-//       upcoming
-//     }
-//   }
-// `
-
 const Home = () => {
   const [Width, setWidth] = useState(null)
 
@@ -93,18 +79,28 @@ const Home = () => {
                 School Description
               </Text>{" "}
             </Body>
-            <Flex justifyCenter>
-              <Button>
-                <FiPhoneCall
-                  style={{ paddingRight: "10px", fontSize: "2rem" }}
-                />{" "}
-                Contact Support{" "}
-              </Button>
-              <Button>
-                <FiMap style={{ paddingRight: "10px", fontSize: "2rem" }} />{" "}
-                View Location{" "}
-              </Button>
-            </Flex>
+
+            {Width >= 600 ? (
+              <Flex justifyCenter>
+                <Button>
+                  <FiPhoneCall
+                    style={{ paddingRight: "10px", fontSize: "2rem" }}
+                  />{" "}
+                  Contact Support{" "}
+                </Button>
+                <Button>
+                  <FiMap style={{ paddingRight: "10px", fontSize: "2rem" }} />{" "}
+                  View Location{" "}
+                </Button>
+              </Flex>
+            ) : (
+              <Flex justifyCenter>
+                <Button>
+                  <FiMap style={{ paddingRight: "10px", fontSize: "2rem" }} />{" "}
+                  View Location{" "}
+                </Button>
+              </Flex>
+            )}
           </div>
           <br />
 

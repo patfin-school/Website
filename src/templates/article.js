@@ -42,9 +42,19 @@ export const query = graphql`
   }
 `
 
-const Article = ({ data }) => {
+const Article = ({ id }) => {
   const Article = data.articles.articles
 
+  const { data, error } = useQuery(query, {
+    variables: {
+      id,
+    },
+  })
+
+  console.log(Article)
+  if (data) {
+    console.log(data)
+  }
   return (
     <Layout>
       <br />
@@ -62,7 +72,7 @@ const Article = ({ data }) => {
             </Title>
           </Flex>
 
-          <Text small> {Article.title} </Text>
+          <Text small> {Article.content} </Text>
         </Flex>
         <Title black> {Article.title} </Title>
         <ArticleBody>{Article.content}</ArticleBody>

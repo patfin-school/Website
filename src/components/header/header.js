@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react"
 import Flex from "styled-flex-component"
 import { FiMenu } from "react-icons/fi"
 
-import { HeaderBody } from "../styles/style"
+import { HeaderBody, Hover } from "../../styles/style"
+import Menu from "./menu"
+import Burger from "./burger"
 
 const Header = props => {
   const [Width, setWidth] = useState(null)
@@ -20,6 +22,9 @@ const Header = props => {
     window.addEventListener("resize", handleResize.bind(this))
     return () => window.removeEventListener("resize", handleResize.bind(this))
   }, [])
+
+  const [open, setOpen] = useState(false)
+  const menuId = "main-menu"
 
   return (
     <div>
@@ -71,7 +76,24 @@ const Header = props => {
               </Link>
             </Flex>
 
-            <FiMenu style={{ fontSize: "2em" }} />
+            <Flex>
+              <div>
+                <Burger
+                  type="Notification"
+                  open={open}
+                  setOpen={setOpen}
+                  aria-controls={menuId}
+                />
+                <Menu open={open} setOpen={setOpen} id={menuId} />
+              </div>
+
+              <Hover
+                white
+                style={{ paddingLeft: "10px", paddingRight: "10px" }}
+              >
+                <FiMenu style={{ fontSize: "2em" }} />{" "}
+              </Hover>
+            </Flex>
           </Flex>
         </HeaderBody>
       )}

@@ -36,24 +36,24 @@ const Footer = () => {
 
   return (
     <div>
-      <FooterSection>
-        <Body>
-          <Flex justifyBetween>
-            <Tiny white>
-              11,Oyelami Street , Akeasan , Lagos State , Nigeria{" "}
-            </Tiny>
-            <Tiny white>Patfin@gmail.com</Tiny>
-          </Flex>{" "}
-        </Body>
-        <Flex justifyBetween>
-          <FiFacebook style={{ color: "blue", fontSize: "2.2em" }} />
-          <FiTwitter style={{ color: "blue", fontSize: "2.2em" }} />
-          <FiMail style={{ color: "red", fontSize: "2.2em" }} />
-        </Flex>
-      </FooterSection>
       <FooterBody>
         {Width >= 700 ? (
           <div style={{ padding: "2% 1%" }}>
+            <FooterSection>
+              <Body>
+                <Flex justifyBetween>
+                  <Tiny white>
+                    11,Oyelami Street , Akeasan , Lagos State , Nigeria{" "}
+                  </Tiny>
+                  <Tiny white>Patfin@gmail.com</Tiny>
+                </Flex>{" "}
+              </Body>
+              <Flex justifyBetween>
+                <FiFacebook style={{ color: "blue", fontSize: "2.2em" }} />
+                <FiTwitter style={{ color: "blue", fontSize: "2.2em" }} />
+                <FiMail style={{ color: "red", fontSize: "2.2em" }} />
+              </Flex>
+            </FooterSection>
             <Flex justifyAround>
               <Flex column>
                 <p style={Head}> ACADEMICS </p>
@@ -99,7 +99,14 @@ const Footer = () => {
               <div>
                 <br />
 
-                <Titles small>Patfin School</Titles>
+                <div white style={{ color: "#fff", textAlign: "center" }}>
+                  <Titles small bold>
+                    Patfin School
+                  </Titles>
+                  <Tiny small>
+                    11,Oyelami Street, Akeasan , Lagos State , Nigeria{" "}
+                  </Tiny>
+                </div>
 
                 <Flex justifyAround>
                   <FiFacebook style={{ color: "black", fontSize: "2em" }} />
@@ -113,36 +120,36 @@ const Footer = () => {
             <Flex justifyAround>
               <Flex column>
                 <p style={Head}> PRODUCT </p>
-                <Text small white>
+                <Tiny small white>
                   Jobs
-                </Text>
-                <Text small white>
-                  Documentation
-                </Text>
-                <Text small white>
+                </Tiny>
+                <Tiny small white>
+                  Help
+                </Tiny>
+                <Tiny small white>
                   Billing
-                </Text>
+                </Tiny>
               </Flex>
               <Flex column>
                 <p style={Head}> HELP </p>
-                <Text small white>
-                  Create Team
-                </Text>
-                <Text small white>
-                  Documentation
-                </Text>
-                <Text small white>
+                <Tiny small white>
+                  Scheme
+                </Tiny>
+                <Tiny small white>
+                  Help
+                </Tiny>
+                <Tiny small white>
                   Billing
-                </Text>
+                </Tiny>
               </Flex>
               <Flex column>
                 <p style={Head}> MORE </p>
-                <Text small white>
+                <Tiny small white>
                   Admissions
-                </Text>
-                <Text small white>
+                </Tiny>
+                <Tiny small white>
                   Scheme
-                </Text>
+                </Tiny>
               </Flex>
             </Flex>
           </div>
@@ -150,8 +157,7 @@ const Footer = () => {
 
         <FooterSection>
           <Tiny small>
-            Copyright © {new Date().getFullYear()} , a subsidiary of the
-            <a href="https://www.fundry.netlify.com"> Fundry Program </a>.
+            Copyright © {new Date().getFullYear()} - Rights Reserved
             <br /> <a href="/"> Terms of Service </a> or
             <a href="/"> Privacy Policies </a>
           </Tiny>
