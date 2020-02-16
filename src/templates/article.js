@@ -43,13 +43,13 @@ export const query = graphql`
 `
 
 const Article = ({ id }) => {
-  const Article = data.articles.articles
-
   const { data, error } = useQuery(query, {
     variables: {
       id,
     },
   })
+
+  const Article = data.articles.articles
 
   console.log(Article)
   if (data) {
