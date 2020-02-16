@@ -77,22 +77,13 @@ const Header = props => {
             </Flex>
 
             <Flex>
-              <div>
-                <Burger
-                  type="Notification"
-                  open={open}
-                  setOpen={setOpen}
-                  aria-controls={menuId}
-                />
-                <Menu open={open} setOpen={setOpen} id={menuId} />
-              </div>
-
-              <Hover
-                white
-                style={{ paddingLeft: "10px", paddingRight: "10px" }}
-              >
-                <FiMenu style={{ fontSize: "2em" }} />{" "}
-              </Hover>
+              <Burger
+                type="Notification"
+                open={open}
+                setOpen={setOpen}
+                aria-controls={menuId}
+              />
+              <Menu open={open} setOpen={setOpen} id={menuId} />
             </Flex>
           </Flex>
         </HeaderBody>

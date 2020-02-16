@@ -74,7 +74,7 @@ const Motto = styled.h1`
   font-size: 2.4em;
   `};
   ${media.lessThan("small")`
-  font-size:1.8em;
+  font-size: 1.8em;
   `};
 `
 
