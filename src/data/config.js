@@ -1,24 +1,36 @@
-import { onError } from "apollo-link-error"
-import { ApolloClient, InMemoryCache, HttpLink, ApolloLink } from "apollo-boost"
+import ApolloClient from "apollo-client"
+import fetch from "isomorphic-fetch"
+import React from "react"
+import { ApolloProvider } from "react-apollo-hooks"
+import { split } from "apollo-link"
+import { HttpLink } from "apollo-link-http"
+import { WebSocketLink } from "apollo-link-ws"
+import { InMemoryCache } from "apollo-cache-inmemory"
+import { SubscriptionClient } from "subscriptions-transport-ws"
+import { getMainDefinition } from "apollo-utilities"
+import ws from "ws"
 
-const ENDPOINT = process.env.GRAPHQL_ENDPOINT
+import {} from "apollo-boost"
 
-const Client = new ApolloClient({
-  link: ApolloLink.from([
-    onError(({ graphQLErrors, networkError }) => {
-      if (graphQLErrors)
-        graphQLErrors.map(({ message, locations, path }) =>
-          console.log(
-            `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
-          )
-        )
-      if (networkError) console.log(`[Network error]: ${networkError}`)
-    }),
-    new HttpLink({
-      uri: ENDPOINT,
-    }),
-  ]),
-  cache: new InMemoryCache(),
+const URL = process.env.GATSBY_GRAPHQL_ENDPOINT
+const SECRET = process.env.GATSBY_HASURA_SECRET
+
+const http = new HttpLink({
+  uri: URL,
+  headers: {
+    "x-hasura-admin-secret": SECRET,
+  },
+  fetch,
 })
 
-export default Client
+const link = split(({ query }) => {
+  const { kind, operation } = getMainDefinition(query)
+
+  return kind === "OperationDefinition" && operation === "subscription"
+}, http)
+
+export const client = new ApolloClient({ link, cache: new InMemoryCache() })
+
+export const wrapRootElement = ({ element }) => (
+  <ApolloProvider client={client}>{element}</ApolloProvider>
+)
