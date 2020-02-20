@@ -1,1 +1,1 @@
-export { wrapRootElement } from "./src/data/config"
+// export { wrapRootElement } from "./src/data/config"
