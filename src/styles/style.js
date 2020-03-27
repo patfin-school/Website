@@ -92,7 +92,7 @@ const BannerBody = styled.div`
 `
 
 const HeaderBody = styled.nav`
-  padding: 0.2em 0.7em;
+  padding: 0.2em 0.5em;
   background-color: #f2f5ff;
   box-shadow: 0px 3px 4px grey;
   h2 {
@@ -113,7 +113,7 @@ const HeaderBody = styled.nav`
     margin: 0.3em;
     font-size: 1.2em;
   }
-  ${media.lessThan("large")` 
+  ${media.lessThan("large")`
   padding: 0.3em 1em;
   a {
     margin: 0.3em;
@@ -138,7 +138,7 @@ const Input = styled.input`
   border: 1.2px solid #0e2f5a;
   ${media.lessThan("medium")`
   border-radius: 0.7em;
-  font-size: 1em; 
+  font-size: 1em;
   padding: 0.4em 1em;
   width : 28em;
   `};
@@ -150,7 +150,7 @@ const Input = styled.input`
   `};
   ${media.lessThan("small")`
   border-radius: 0.3em;
-  font-size: 1em;  
+  font-size: 1em;
   width : 21em;
   `};
 `
@@ -260,7 +260,14 @@ const ArticleBody = styled.article`
   `};
 `
 
+const Notification = styled.div`
+  padding: 0.5rem;
+  background: #401364;
+  color: #fff;
+`
+
 export {
+  Notification,
   ArticleBody,
   ActivitiesItems,
   Links,

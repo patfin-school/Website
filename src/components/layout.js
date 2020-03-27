@@ -33,7 +33,7 @@ const Layout = ({ children }) => (
               href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             />
             <link
-              href="https://fonts.googleapis.com/css?family=Open+Sans"
+              hrnef="https://fots.googleapis.com/css?family=Open+Sans"
               rel="stylesheet"
             />
           </Helmet>
