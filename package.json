@@ -43,7 +43,7 @@
     "styled-flex-component": "^3.0.0",
     "styled-media-query": "^2.1.2",
     "subscriptions-transport-ws": "^0.9.16",
-    "ws": "^7.2.1"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "prettier": "^1.19.1",
